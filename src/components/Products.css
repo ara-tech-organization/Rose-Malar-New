@@ -1,0 +1,121 @@
+.product-block {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-block--last {
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.product-copy {
+  min-width: 0;
+}
+
+.product-block h3 {
+  position: relative;
+  font-size: 1.2rem;
+  color: var(--blue-900);
+  margin-bottom: 12px;
+  padding-top: 14px;
+}
+
+.product-block h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--blue-500);
+}
+
+.product-block p {
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.product-terms {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.product-terms li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.product-terms li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue-500);
+}
+
+.product-highlight {
+  background: var(--blue-100);
+  border: 1px solid #cddffb;
+  border-radius: var(--radius-md);
+  padding: 24px 24px 32px;
+  margin-bottom: 44px;
+}
+
+.product-highlight .product-terms li::before {
+  background: var(--blue-700);
+}
+
+.cumulative-note {
+  border-left: 4px solid var(--blue-500);
+}
+
+@media (min-width: 768px) {
+  .product-block {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+  }
+
+  .product-block--last {
+    margin-bottom: 24px;
+  }
+
+  .product-block h3 {
+    font-size: 1.35rem;
+  }
+
+  .product-split .rate-table-wrap {
+    margin-top: 4px;
+  }
+
+  .product-highlight {
+    padding: 36px 40px 40px;
+    margin-bottom: 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-split {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-split {
+    grid-template-columns: 1.35fr 1fr;
+    gap: 56px;
+  }
+}

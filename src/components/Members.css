@@ -1,0 +1,77 @@
+.member-note-banner {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  background: var(--blue-900);
+  border-radius: var(--radius-md);
+  margin-bottom: 32px;
+}
+
+.member-note-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-500);
+}
+
+.member-note-banner p {
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.member-note-status {
+  font-size: 0.78rem;
+  color: #a9bfe0;
+}
+
+.member-criteria {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.member-criteria li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 4px;
+  border-bottom: 1px solid var(--border);
+  counter-increment: criteria;
+}
+
+.member-criteria li::before {
+  content: counter(criteria);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  margin-top: 2px;
+  border-radius: 50%;
+  border: 2px solid var(--blue-500);
+  color: var(--blue-500);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .member-note-banner {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 28px;
+  }
+
+  .member-note-status {
+    border-top: none;
+    padding-left: 24px;
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .member-criteria li {
+    padding: 20px 8px;
+  }
+}

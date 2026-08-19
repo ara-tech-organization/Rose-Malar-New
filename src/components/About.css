@@ -1,0 +1,167 @@
+.about-grid {
+  display: grid;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.about-intro p {
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.about-intro p:first-of-type::first-letter {
+  float: left;
+  font-size: 3.2rem;
+  line-height: 0.85;
+  font-weight: 700;
+  color: var(--blue-500);
+  padding-right: 10px;
+  padding-top: 4px;
+}
+
+.about-quote {
+  padding: 32px;
+  background: var(--blue-900);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.pullquote-mark {
+  display: block;
+  font-size: 2.6rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--blue-500);
+  margin-bottom: 8px;
+}
+
+.about-quote blockquote {
+  margin: 0;
+}
+
+.about-quote blockquote p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--white);
+}
+
+.about-quote cite {
+  display: block;
+  margin-top: 16px;
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a9bfe0;
+}
+
+.about-timeline {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.about-timeline-card {
+  position: relative;
+  padding-left: 32px;
+  padding-bottom: 28px;
+  border-left: 2px solid var(--border);
+}
+
+.about-timeline-card:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.about-timeline-card::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--blue-500);
+  box-shadow: 0 0 0 3px var(--white);
+}
+
+.about-timeline-year {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blue-500);
+  margin-bottom: 4px;
+}
+
+.about-timeline-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--blue-900);
+  margin-bottom: 8px;
+}
+
+.about-timeline-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 480px;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1.3fr 0.85fr;
+    gap: 8%;
+    margin-bottom: 64px;
+  }
+
+  .about-quote {
+    padding: 40px;
+    margin-top: 34px;
+    transform: translateY(-16px);
+    box-shadow: var(--shadow-card);
+  }
+
+  .pullquote-mark {
+    font-size: 3rem;
+  }
+
+  .about-quote blockquote p {
+    font-size: 1.3rem;
+  }
+
+  .about-timeline {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 60px;
+  }
+
+  .about-timeline-card {
+    flex: 1;
+    padding-left: 0;
+    padding-top: 28px;
+    padding-bottom: 0;
+    border-left: none;
+    border-top: 2px solid var(--border);
+  }
+
+  .about-timeline-card:last-child {
+    border-top-color: var(--border);
+  }
+
+  .about-timeline-card::before {
+    left: 0;
+    top: -7px;
+  }
+
+  .about-timeline-card:nth-child(2) {
+    margin-top: 36px;
+  }
+
+  .about-timeline-card:nth-child(3) {
+    margin-top: 72px;
+  }
+}

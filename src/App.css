@@ -1,0 +1,135 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+.section {
+  padding-block: 48px;
+  position: relative;
+}
+
+.section--surface {
+  background: var(--surface);
+}
+
+.section-header {
+  max-width: 640px;
+  margin-bottom: 32px;
+}
+
+.section-eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue-500);
+  margin-bottom: 10px;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--blue-500);
+  border-radius: var(--radius-pill);
+}
+
+.section-header h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+}
+
+.section-header--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-header--center .section-eyebrow {
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--blue-500);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--blue-700);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--blue-900);
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue-500);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+}
+
+.placeholder-note {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  background: var(--surface);
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding-inline: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: 72px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+    font-size: 1.9rem;
+  }
+}
