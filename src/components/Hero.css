@@ -187,6 +187,10 @@
     border-top: 1px solid rgba(255, 255, 255, 0.14);
   }
 
+  .hero-strip .hero-stat:last-child {
+    grid-column: auto;
+  }
+
   .hero-stat {
     padding-left: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.14);
