@@ -43,9 +43,8 @@ export default function About() {
 
         <Reveal>
           <div className="about-fact-grid">
-            {FACTS.map((fact, i) => (
+            {FACTS.map((fact) => (
               <div key={fact.title} className="about-fact-card">
-                <span className="about-fact-index">{String(i + 1).padStart(2, '0')}</span>
                 <span className="about-fact-tag">{fact.tag}</span>
                 <h3>{fact.title}</h3>
                 <p>{fact.text}</p>

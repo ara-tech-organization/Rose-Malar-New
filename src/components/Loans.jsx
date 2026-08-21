@@ -62,7 +62,6 @@ export default function Loans() {
             </div>
 
             <div className={`loan-detail loan-detail--${activeAccent}`}>
-              <span className="loan-detail-code">{active.code}</span>
               <h3>{active.name}</h3>
               <p>{active.description}</p>
               <span className="loan-detail-note">Rates and eligibility — coming soon</span>
