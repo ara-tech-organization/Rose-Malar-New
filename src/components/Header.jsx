@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/Logo.png'
 import './Header.css'
 
@@ -26,11 +26,7 @@ export default function Header() {
 
       <div className="container site-header-main">
         <Link to="/" className="brand">
-          <img src={logo} alt="RMDCS logo" className="brand-mark" />
-          <span className="brand-text">
-            <span className="brand-name">Rose Malar</span>
-            <span className="brand-sub">Developmental Co-operative Society Ltd.</span>
-          </span>
+          <img src={logo} alt="Rose Malar Developmental Co-operative Society Ltd." className="brand-mark" />
         </Link>
 
         <button
@@ -47,9 +43,15 @@ export default function Header() {
 
         <nav className={`site-nav ${menuOpen ? 'site-nav-open' : ''}`}>
           {NAV_LINKS.map((link) => (
-            <Link key={link.to} to={link.to} className="site-nav-link" onClick={() => setMenuOpen(false)}>
+            <NavLink
+              key={link.to}
+              to={link.to}
+              end={link.to === '/'}
+              className={({ isActive }) => `site-nav-link ${isActive ? 'site-nav-link--active' : ''}`}
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
       </div>
