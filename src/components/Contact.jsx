@@ -67,8 +67,8 @@ export default function Contact() {
         </Reveal>
 
         <Reveal>
-          <div className="contact-panel">
-            <div className="contact-info">
+          <div className="contact-banner">
+            <div className="contact-info-row-list">
               {INFO.map((item) => (
                 <div key={item.label} className="contact-info-row">
                   <span className="contact-icon" aria-hidden="true">
@@ -80,17 +80,21 @@ export default function Contact() {
                   </div>
                 </div>
               ))}
-
-              <div className="contact-lottie">
-                <DotLottieReact
-                  src="https://lottie.host/838351a6-a9cb-44fc-817e-0ea2082919c9/Kn7tA8Jxpt.lottie"
-                  loop
-                  autoplay
-                />
-              </div>
             </div>
 
-            <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+            <div className="contact-lottie">
+              <DotLottieReact
+                src="https://lottie.host/838351a6-a9cb-44fc-817e-0ea2082919c9/Kn7tA8Jxpt.lottie"
+                loop
+                autoplay
+              />
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <form className="contact-form-card" onSubmit={(event) => event.preventDefault()}>
+            <div className="contact-form-grid">
               <label>
                 Name
                 <input type="text" name="name" value={form.name} onChange={handleChange} />
@@ -99,18 +103,20 @@ export default function Contact() {
                 Email
                 <input type="email" name="email" value={form.email} onChange={handleChange} />
               </label>
-              <label>
-                Message
-                <textarea name="message" rows="3" value={form.message} onChange={handleChange} />
-              </label>
+            </div>
+            <label>
+              Message
+              <textarea name="message" rows="3" value={form.message} onChange={handleChange} />
+            </label>
+            <div className="contact-form-footer">
               <button type="submit" className="btn btn-primary" disabled>
                 Send Enquiry
               </button>
               <p className="contact-form-note">
                 This form will be connected once branch contact details are confirmed.
               </p>
-            </form>
-          </div>
+            </div>
+          </form>
         </Reveal>
       </div>
     </section>

@@ -1,4 +1,23 @@
+import logo from '../assets/Logo.png'
 import './Hero.css'
+
+const STATS = [
+  {
+    value: 'Up to 12.50%',
+    label: 'Highest Fixed Deposit rate p.a.',
+    accent: 'blue',
+  },
+  {
+    value: 'Savings · RD · FD',
+    label: 'Deposit schemes on offer',
+    accent: 'teal',
+  },
+  {
+    value: '4 Loan types',
+    label: 'Micro, Jewel, Housing & more',
+    accent: 'coral',
+  },
+]
 
 export default function Hero() {
   return (
@@ -29,25 +48,14 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-visual">
-          <div className="hero-image-frame">
-            <span>Image to be added</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="container hero-strip">
-        <div className="hero-stat">
-          <span className="hero-stat-value">Up to 12.50%</span>
-          <span className="hero-stat-label">Highest FD rate p.a.</span>
-        </div>
-        <div className="hero-stat">
-          <span className="hero-stat-value">Savings · RD · FD</span>
-          <span className="hero-stat-label">Deposit schemes on offer</span>
-        </div>
-        <div className="hero-stat">
-          <span className="hero-stat-value">4 Loan types</span>
-          <span className="hero-stat-label">Micro, Jewel, Housing &amp; more</span>
+        <div className="hero-stat-stack">
+          {STATS.map((stat, i) => (
+            <div key={stat.label} className={`hero-stat-card hero-stat-card--${stat.accent} hero-stat-card--${i}`}>
+              <span className="hero-stat-value">{stat.value}</span>
+              <span className="hero-stat-label">{stat.label}</span>
+            </div>
+          ))}
+          <img src={logo} alt="RMDCS logo" className="hero-stat-logo" />
         </div>
       </div>
     </section>
