@@ -16,6 +16,26 @@
   color: var(--blue-500);
 }
 
+.archive-tile--teal {
+  color: var(--accent-teal);
+  border-color: color-mix(in srgb, var(--accent-teal) 45%, var(--border));
+}
+
+.archive-tile--magenta {
+  color: var(--accent-magenta);
+  border-color: color-mix(in srgb, var(--accent-magenta) 45%, var(--border));
+}
+
+.archive-tile--indigo {
+  color: var(--accent-indigo);
+  border-color: color-mix(in srgb, var(--accent-indigo) 45%, var(--border));
+}
+
+.archive-tile--coral {
+  color: var(--accent-coral);
+  border-color: color-mix(in srgb, var(--accent-coral) 45%, var(--border));
+}
+
 .archive-tile--wide {
   grid-column: span 2;
   aspect-ratio: 8 / 3;

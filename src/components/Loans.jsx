@@ -1,6 +1,8 @@
 import Reveal from './Reveal'
 import './Loans.css'
 
+const ACCENTS = ['teal', 'magenta', 'indigo', 'coral']
+
 const LOANS = [
   {
     code: 'ME',
@@ -37,15 +39,13 @@ export default function Loans() {
         </Reveal>
 
         <Reveal>
-          <div className="loan-list">
-            {LOANS.map((loan) => (
-              <div key={loan.name} className="loan-row">
-                <span className="loan-code">{loan.code}</span>
-                <div className="loan-row-body">
-                  <h3>{loan.name}</h3>
-                  <p>{loan.description}</p>
-                </div>
-                <span className="loan-row-note">Rates and eligibility — coming soon</span>
+          <div className="loan-grid">
+            {LOANS.map((loan, i) => (
+              <div key={loan.name} className={`loan-tile loan-tile--${ACCENTS[i % ACCENTS.length]}`}>
+                <span className="loan-tile-code">{loan.code}</span>
+                <h3>{loan.name}</h3>
+                <p>{loan.description}</p>
+                <span className="loan-tile-note">Rates and eligibility — coming soon</span>
               </div>
             ))}
           </div>

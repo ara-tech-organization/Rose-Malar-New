@@ -1,5 +1,5 @@
 .site-footer {
-  background: var(--blue-950);
+  background: linear-gradient(160deg, var(--blue-950), var(--blue-900) 75%);
   color: var(--white);
 }
 
@@ -9,17 +9,12 @@
   padding-block: 32px;
 }
 
-.footer-brand .brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
-  background: var(--blue-500);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 0.9rem;
+.footer-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 12px;
 }
 
@@ -29,7 +24,7 @@
 }
 
 .footer-muted {
-  color: #90a5c9;
+  color: #c98cb5;
   font-size: 0.8rem !important;
   margin-top: 6px;
 }
@@ -49,7 +44,7 @@
 }
 
 .footer-links a {
-  color: #c3d3ec;
+  color: #f0d3e6;
   font-size: 0.9rem;
   white-space: nowrap;
 }
@@ -77,12 +72,12 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #7d95bf;
+  color: #b57ba3;
 }
 
 .footer-contact-value {
   font-size: 0.9rem;
-  color: #c3d3ec;
+  color: #f0d3e6;
 }
 
 .footer-bottom {
@@ -97,12 +92,12 @@
 
 .footer-bottom p {
   font-size: 0.8rem;
-  color: #90a5c9;
+  color: #c98cb5;
   margin: 0;
 }
 
 .footer-credit a {
-  color: #c3d3ec;
+  color: #f0d3e6;
   font-weight: 500;
 }
 

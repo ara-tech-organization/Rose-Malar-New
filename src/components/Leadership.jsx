@@ -2,6 +2,7 @@ import Reveal from './Reveal'
 import './Leadership.css'
 
 const PENDING_SEATS = 3
+const ACCENTS = ['teal', 'indigo', 'coral']
 
 export default function Leadership() {
   return (
@@ -27,7 +28,7 @@ export default function Leadership() {
             </div>
 
             {Array.from({ length: PENDING_SEATS }).map((_, i) => (
-              <div key={i} className="leader-row leader-row--open">
+              <div key={i} className={`leader-row leader-row--open leader-row--${ACCENTS[i % ACCENTS.length]}`}>
                 <span className="leader-row-avatar leader-row-avatar--open" aria-hidden="true">
                   <svg viewBox="0 0 24 24" role="presentation">
                     <circle cx="12" cy="9" r="4" fill="none" stroke="currentColor" strokeWidth="1.5" />

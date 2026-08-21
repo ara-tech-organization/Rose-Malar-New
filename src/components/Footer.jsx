@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logo from '../assets/Logo.png'
 import './Footer.css'
 
 const NAV_LINKS = [
@@ -24,7 +25,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <span className="brand-mark">RM</span>
+          <img src={logo} alt="RMDCS logo" className="footer-logo" />
           <p>Rose Malar Developmental Co-operative Society Limited</p>
           <p className="footer-muted">
             Regd. under the Multi-State Co-operative Societies Act, 2002.

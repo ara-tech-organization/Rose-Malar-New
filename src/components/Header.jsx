@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../assets/Logo.png'
 import './Header.css'
 
 const NAV_LINKS = [
@@ -25,7 +26,7 @@ export default function Header() {
 
       <div className="container site-header-main">
         <Link to="/" className="brand">
-          <span className="brand-mark">RM</span>
+          <img src={logo} alt="RMDCS logo" className="brand-mark" />
           <span className="brand-text">
             <span className="brand-name">Rose Malar</span>
             <span className="brand-sub">Developmental Co-operative Society Ltd.</span>

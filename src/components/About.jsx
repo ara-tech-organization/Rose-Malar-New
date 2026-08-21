@@ -6,16 +6,19 @@ const TIMELINE = [
     year: '2008',
     label: 'Founded',
     text: 'RMDCS is established as a Multi-State Co-operative Society under the Multi-State Co-operative Societies Act, 2002.',
+    area: 't1',
   },
   {
     year: '2018',
     label: 'New Chairmanship',
     text: 'RMDCS begins functioning under the Chairmanship of Mrs. Prabala Jabeegara Ross.',
+    area: 't2',
   },
   {
     year: 'Today',
     label: 'One-Stop Financial Services',
     text: 'Serving members with savings, deposits, and loans rooted in self-help and mutual assistance.',
+    area: 't3',
   },
 ]
 
@@ -24,8 +27,8 @@ export default function About() {
     <section className="section about">
       <div className="container">
         <Reveal>
-          <div className="about-grid">
-            <div className="about-intro">
+          <div className="about-mosaic">
+            <div className="about-cell about-cell--intro">
               <span className="section-eyebrow">About Us</span>
               <h2>Who we are</h2>
               <p>
@@ -42,7 +45,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="about-quote">
+            <div className="about-cell about-cell--quote">
               <span className="pullquote-mark" aria-hidden="true">&ldquo;</span>
               <blockquote>
                 <p>
@@ -52,15 +55,11 @@ export default function About() {
               </blockquote>
               <cite>Our Vision</cite>
             </div>
-          </div>
-        </Reveal>
 
-        <Reveal>
-          <div className="about-timeline">
             {TIMELINE.map((item) => (
-              <div key={item.year} className="about-timeline-card">
-                <span className="about-timeline-year">{item.year}</span>
-                <span className="about-timeline-label">{item.label}</span>
+              <div key={item.year} className={`about-cell about-cell--${item.area}`}>
+                <span className="about-cell-year">{item.year}</span>
+                <span className="about-cell-label">{item.label}</span>
                 <p>{item.text}</p>
               </div>
             ))}

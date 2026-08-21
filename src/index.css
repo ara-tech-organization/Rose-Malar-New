@@ -7,23 +7,31 @@
 */
 
 :root {
-  --blue-950: #071a3d;
-  --blue-900: #0c2b63;
-  --blue-700: #14418c;
-  --blue-500: #2f6fed;
-  --blue-100: #eaf1fd;
+  /* Dark surfaces: the magenta ribbon from the RMDCS logo (was navy) */
+  --blue-950: #3c1035;
+  --blue-900: #5c1952;
+  --blue-700: #8a2a74;
+  /* Bright accent: the sky blue from the logo's lettering (buttons, links) */
+  --blue-500: #1fa6dd;
+  --blue-100: #fbe6f2;
   --white: #ffffff;
-  --surface: #f5f8fd;
-  --text: #1c2433;
-  --text-muted: #626c7c;
-  --border: #dde4f0;
+  --surface: #fbf3f8;
+  --text: #211320;
+  --text-muted: #79647a;
+  --border: #f0d9e9;
+
+  /* Petal accents, sampled from the logo's ribbon shapes */
+  --accent-teal: #4fb8c7;
+  --accent-magenta: #9c2f74;
+  --accent-indigo: #33327f;
+  --accent-coral: #f2a48f;
 
   --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --max-width: 1160px;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-pill: 999px;
-  --shadow-card: 0 6px 24px rgba(12, 43, 99, 0.08);
+  --shadow-card: 0 6px 24px rgba(10, 75, 116, 0.1);
 }
 
 * {

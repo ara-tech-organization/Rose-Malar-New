@@ -3,6 +3,10 @@ import './Hero.css'
 export default function Hero() {
   return (
     <section id="home" className="hero">
+      <span className="hero-blob hero-blob--teal" aria-hidden="true" />
+      <span className="hero-blob hero-blob--magenta" aria-hidden="true" />
+      <span className="hero-blob hero-blob--coral" aria-hidden="true" />
+
       <div className="container hero-grid">
         <div className="hero-content">
           <span className="hero-eyebrow">Est. 2008 · Multi-State Co-operative Society</span>

@@ -2,6 +2,7 @@ import Reveal from './Reveal'
 import './Archive.css'
 
 const TILE_COUNT = 5
+const ACCENTS = ['blue', 'teal', 'magenta', 'indigo', 'coral']
 
 export default function Archive() {
   return (
@@ -21,7 +22,10 @@ export default function Archive() {
         <Reveal>
           <div className="archive-gallery">
             {Array.from({ length: TILE_COUNT }).map((_, i) => (
-              <div key={i} className={`archive-tile ${i === 0 ? 'archive-tile--wide' : ''}`}>
+              <div
+                key={i}
+                className={`archive-tile archive-tile--${ACCENTS[i % ACCENTS.length]} ${i === 0 ? 'archive-tile--wide' : ''}`}
+              >
                 <svg viewBox="0 0 64 64" role="presentation" aria-hidden="true">
                   <rect x="4" y="10" width="56" height="44" rx="4" fill="none" stroke="currentColor" strokeWidth="2" />
                   <circle cx="20" cy="24" r="5" fill="none" stroke="currentColor" strokeWidth="2" />
