@@ -1,26 +1,16 @@
-.about-mosaic {
-  display: grid;
-  gap: 16px;
+.about-intro {
+  max-width: 720px;
+  margin-bottom: 40px;
 }
 
-.about-cell {
-  border-radius: var(--radius-md);
-  padding: 24px;
-}
-
-.about-cell--intro {
-  background: var(--white);
-  border: 1px solid var(--border);
-}
-
-.about-cell--intro p {
+.about-intro p {
   color: var(--text);
   margin-bottom: 16px;
 }
 
-.about-cell--intro p:first-of-type::first-letter {
+.about-intro p:first-of-type::first-letter {
   float: left;
-  font-size: 3rem;
+  font-size: 3.2rem;
   line-height: 0.85;
   font-weight: 700;
   color: var(--blue-500);
@@ -28,119 +18,135 @@
   padding-top: 4px;
 }
 
-.about-cell--quote {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: var(--blue-900);
+.about-quote-stripe {
+  background: linear-gradient(160deg, var(--blue-950), var(--blue-900) 70%);
+  padding-block: 44px;
+  margin-bottom: 48px;
   text-align: center;
 }
 
 .pullquote-mark {
   display: block;
-  font-size: 2rem;
+  font-size: 2.6rem;
   line-height: 1;
   font-weight: 700;
   color: var(--blue-500);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
-.about-cell--quote blockquote {
+.about-quote-stripe blockquote {
   margin: 0;
 }
 
-.about-cell--quote blockquote p {
-  font-size: 1rem;
+.about-quote-stripe blockquote p {
+  font-size: 1.2rem;
   font-weight: 500;
   font-style: italic;
   line-height: 1.4;
   color: var(--white);
+  max-width: 560px;
+  margin-inline: auto;
 }
 
-.about-cell--quote cite {
+.about-quote-stripe cite {
   display: block;
-  margin-top: 12px;
+  margin-top: 16px;
   font-style: normal;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #f0d3e6;
 }
 
-.about-cell--t1,
-.about-cell--t2,
-.about-cell--t3 {
-  border: 1px solid var(--border);
+.about-roadmap {
+  display: grid;
+  gap: 28px;
 }
 
-.about-cell--t1 {
-  background: color-mix(in srgb, var(--accent-teal) 12%, var(--white));
-  border-color: color-mix(in srgb, var(--accent-teal) 30%, var(--white));
+.about-step {
+  position: relative;
+  padding-left: 44px;
 }
 
-.about-cell--t2 {
-  background: color-mix(in srgb, var(--accent-indigo) 10%, var(--white));
-  border-color: color-mix(in srgb, var(--accent-indigo) 25%, var(--white));
+.about-step-node {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-.about-cell--t3 {
-  background: color-mix(in srgb, var(--accent-coral) 14%, var(--white));
-  border-color: color-mix(in srgb, var(--accent-coral) 30%, var(--white));
+.about-step-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--blue-500);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.85rem;
 }
 
-.about-cell-year {
+.about-step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 32px;
+  bottom: -28px;
+  width: 2px;
+  background: var(--border);
+}
+
+.about-step-year {
   display: block;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--blue-900);
-  margin-bottom: 2px;
 }
 
-.about-cell-label {
+.about-step-label {
   display: block;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--blue-700);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
-.about-cell p {
-  font-size: 0.85rem;
+.about-step p {
+  font-size: 0.88rem;
   color: var(--text-muted);
-  margin: 0;
+  max-width: 480px;
 }
 
 @media (min-width: 768px) {
-  .about-mosaic {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, minmax(150px, auto));
-    grid-template-areas:
-      'intro intro quote t1'
-      'intro intro t2    t3';
-    gap: 20px;
+  .about-quote-stripe {
+    padding-block: 56px;
   }
 
-  .about-cell--intro {
-    grid-area: intro;
-    padding: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .about-quote-stripe blockquote p {
+    font-size: 1.35rem;
   }
 
-  .about-cell--quote {
-    grid-area: quote;
-    padding: 28px;
+  .about-roadmap {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
   }
 
-  .about-cell--t1 {
-    grid-area: t1;
+  .about-step {
+    padding-left: 0;
+    padding-top: 44px;
   }
 
-  .about-cell--t2 {
-    grid-area: t2;
+  .about-step-node {
+    left: 0;
+    top: 0;
   }
 
-  .about-cell--t3 {
-    grid-area: t3;
+  .about-step:not(:last-child)::before {
+    left: 32px;
+    right: -32px;
+    top: 15px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
   }
 }
