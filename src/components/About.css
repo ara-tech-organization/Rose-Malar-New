@@ -1,31 +1,72 @@
-.about-grid {
+.about-fact-grid {
   display: grid;
-  gap: 32px;
+  gap: 16px;
+  margin-bottom: 40px;
 }
 
-.about-main h2 {
-  font-size: 1.6rem;
-  margin-bottom: 18px;
+.about-fact-card {
+  position: relative;
+  padding: 24px 22px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
 }
 
-.about-main p {
+.about-fact-index {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--blue-100);
+  -webkit-text-stroke: 1px var(--blue-500);
+  margin-bottom: 10px;
+}
+
+.about-fact-tag {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-500);
+  margin-bottom: 8px;
+}
+
+.about-fact-card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.about-fact-card p {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 16px;
+  font-size: 0.88rem;
 }
 
 .about-vision {
-  margin: 24px 0 0;
-  padding: 4px 0 4px 20px;
-  border-left: 3px solid var(--blue-500);
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 36px 28px 30px;
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border-top: 3px solid var(--blue-500);
+}
+
+.about-vision-mark {
+  display: block;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--blue-500);
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .about-vision p {
-  color: var(--blue-900);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 8px;
+  line-height: 1.45;
+  color: var(--blue-900);
+  margin-bottom: 14px;
 }
 
 .about-vision cite {
@@ -36,68 +77,23 @@
   color: var(--blue-500);
 }
 
-.about-panel {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--blue-500);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-  padding: 24px;
+@media (min-width: 576px) {
+  .about-fact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
-.about-panel-title {
-  display: block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-
-.about-timeline {
-  list-style: none;
-  padding-inline: 0;
-  margin: 0;
-  display: grid;
-  gap: 14px;
-}
-
-.about-timeline li {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
-}
-
-.about-timeline li:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
-.about-timeline-year {
-  font-size: 0.98rem;
-  font-weight: 700;
-  color: var(--blue-700);
-  white-space: nowrap;
-}
-
-.about-timeline-label {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  text-align: right;
-}
-
-@media (min-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1.6fr 1fr;
-    gap: 48px;
-    align-items: start;
+@media (min-width: 992px) {
+  .about-fact-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .about-main h2 {
-    font-size: 1.9rem;
+  .about-vision {
+    padding: 44px 40px 36px;
+  }
+
+  .about-vision p {
+    font-size: 1.35rem;
   }
 }

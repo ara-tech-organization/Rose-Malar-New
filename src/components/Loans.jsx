@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Reveal from './Reveal'
 import './Loans.css'
 
@@ -27,6 +28,10 @@ const LOANS = [
 ]
 
 export default function Loans() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const active = LOANS[activeIndex]
+  const activeAccent = ACCENTS[activeIndex % ACCENTS.length]
+
   return (
     <section id="loans" className="section section--surface">
       <div className="container">
@@ -39,15 +44,29 @@ export default function Loans() {
         </Reveal>
 
         <Reveal>
-          <div className="loan-grid">
-            {LOANS.map((loan, i) => (
-              <div key={loan.name} className={`loan-tile loan-tile--${ACCENTS[i % ACCENTS.length]}`}>
-                <span className="loan-tile-code">{loan.code}</span>
-                <h3>{loan.name}</h3>
-                <p>{loan.description}</p>
-                <span className="loan-tile-note">Rates and eligibility — coming soon</span>
-              </div>
-            ))}
+          <div className="loan-showcase">
+            <div className="loan-select-list">
+              {LOANS.map((loan, i) => (
+                <button
+                  key={loan.name}
+                  type="button"
+                  className={`loan-select-item ${i === activeIndex ? 'loan-select-item--active' : ''}`}
+                  onClick={() => setActiveIndex(i)}
+                >
+                  <span className={`loan-select-code loan-select-code--${ACCENTS[i % ACCENTS.length]}`}>
+                    {loan.code}
+                  </span>
+                  {loan.name}
+                </button>
+              ))}
+            </div>
+
+            <div className={`loan-detail loan-detail--${activeAccent}`}>
+              <span className="loan-detail-code">{active.code}</span>
+              <h3>{active.name}</h3>
+              <p>{active.description}</p>
+              <span className="loan-detail-note">Rates and eligibility — coming soon</span>
+            </div>
           </div>
         </Reveal>
       </div>
