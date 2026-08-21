@@ -110,28 +110,29 @@
 
 .product-terms {
   display: grid;
-  gap: 10px;
   list-style: none;
   padding: 0;
   margin-bottom: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
 .product-terms li {
-  position: relative;
-  padding-left: 20px;
+  padding: 12px 16px;
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--border);
 }
 
-.product-terms li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 9px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--blue-500);
+.product-terms li:last-child {
+  border-bottom: none;
+}
+
+.product-terms li:nth-child(even) {
+  background: var(--surface);
 }
 
 .product-body-split .rate-table-wrap {
