@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import Reveal from './Reveal'
 import './Contact.css'
 
@@ -68,27 +67,17 @@ export default function Contact() {
 
         <Reveal>
           <div className="contact-banner">
-            <div className="contact-info-row-list">
-              {INFO.map((item) => (
-                <div key={item.label} className="contact-info-row">
-                  <span className="contact-icon" aria-hidden="true">
-                    {item.icon}
-                  </span>
-                  <div>
-                    <span className="contact-label">{item.label}</span>
-                    <span className="contact-value">{item.value}</span>
-                  </div>
+            {INFO.map((item) => (
+              <div key={item.label} className="contact-chip">
+                <span className="contact-icon" aria-hidden="true">
+                  {item.icon}
+                </span>
+                <div>
+                  <span className="contact-label">{item.label}</span>
+                  <span className="contact-value">{item.value}</span>
                 </div>
-              ))}
-            </div>
-
-            <div className="contact-lottie">
-              <DotLottieReact
-                src="https://lottie.host/838351a6-a9cb-44fc-817e-0ea2082919c9/Kn7tA8Jxpt.lottie"
-                loop
-                autoplay
-              />
-            </div>
+              </div>
+            ))}
           </div>
         </Reveal>
 

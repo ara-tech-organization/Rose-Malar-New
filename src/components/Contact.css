@@ -1,23 +1,19 @@
 .contact-banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  display: grid;
+  gap: 14px;
   background: linear-gradient(160deg, var(--blue-950), var(--blue-900) 70%);
   border-radius: var(--radius-md);
-  padding: 32px 24px 56px;
+  padding: 28px 24px 56px;
 }
 
-.contact-info-row-list {
-  display: grid;
-  gap: 18px;
-  width: 100%;
-}
-
-.contact-info-row {
+.contact-chip {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
 }
 
 .contact-icon {
@@ -51,16 +47,6 @@
   display: block;
   font-size: 0.92rem;
   color: var(--white);
-}
-
-.contact-lottie {
-  width: 130px;
-  height: 130px;
-}
-
-.contact-lottie > * {
-  width: 100%;
-  height: 100%;
 }
 
 .contact-form-card {
@@ -128,17 +114,9 @@
 
 @media (min-width: 768px) {
   .contact-banner {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 48px 64px;
-  }
-
-  .contact-info-row-list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    width: auto;
-    flex: 1;
+    gap: 20px;
+    padding: 40px 48px 64px;
   }
 
   .contact-form-card {
