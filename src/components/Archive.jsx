@@ -1,8 +1,8 @@
 import Reveal from './Reveal'
 import './Archive.css'
 
-const TILE_COUNT = 6
-const ACCENTS = ['blue', 'teal', 'magenta', 'indigo', 'coral', 'blue']
+const TILE_COUNT = 5
+const ACCENTS = ['blue', 'teal', 'magenta', 'indigo', 'coral']
 
 export default function Archive() {
   return (
