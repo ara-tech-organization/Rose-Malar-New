@@ -58,12 +58,6 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <p>&copy; {year} Rose Malar Developmental Co-operative Society Limited. All rights reserved.</p>
-        <p className="footer-credit">
-          <span className="footer-heart">&hearts;</span> Crafted by{' '}
-          <a href="https://discovertechnologies.co/" target="_blank" rel="noopener noreferrer">
-            ARA Discoveries
-          </a>
-        </p>
       </div>
     </footer>
   )

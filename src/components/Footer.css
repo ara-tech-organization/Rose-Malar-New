@@ -82,10 +82,8 @@
 
 .footer-bottom {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 8px 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-block: 20px;
 }
@@ -94,22 +92,7 @@
   font-size: 0.8rem;
   color: #c98cb5;
   margin: 0;
-}
-
-.footer-credit a {
-  color: #f0d3e6;
-  font-weight: 500;
-}
-
-.footer-credit a:hover {
-  color: var(--white);
-}
-
-.footer-heart {
-  color: var(--blue-500);
-  font-size: 1.1rem;
-  vertical-align: -1px;
-  display: inline-block;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
