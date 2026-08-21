@@ -1,8 +1,8 @@
 import './Hero.css'
 
 const HIGHLIGHTS = [
-  { value: 'Savings · RD · FD', label: 'Deposit schemes' },
-  { value: '4 Loan types', label: 'Micro, Jewel, Housing & more' },
+  { value: 'Savings · RD · FD', label: 'Deposit schemes', accent: 'teal' },
+  { value: '4 Loan types', label: 'Micro, Jewel, Housing & more', accent: 'coral' },
 ]
 
 export default function Hero() {
@@ -31,16 +31,21 @@ export default function Hero() {
         </div>
 
         <aside className="hero-card">
-          <span className="hero-card-label">Highest Fixed Deposit Rate</span>
-          <span className="hero-card-value">
-            12.50<small>% p.a.</small>
-          </span>
+          <div className="hero-card-top">
+            <span className="hero-card-label">Highest Fixed Deposit Rate</span>
+            <span className="hero-card-value">
+              12.50<small>% p.a.</small>
+            </span>
+          </div>
 
           <ul className="hero-card-list">
             {HIGHLIGHTS.map((item) => (
               <li key={item.label}>
-                <span className="hero-card-list-value">{item.value}</span>
-                <span className="hero-card-list-label">{item.label}</span>
+                <span className={`hero-card-dot hero-card-dot--${item.accent}`} aria-hidden="true" />
+                <span>
+                  <span className="hero-card-list-value">{item.value}</span>
+                  <span className="hero-card-list-label">{item.label}</span>
+                </span>
               </li>
             ))}
           </ul>

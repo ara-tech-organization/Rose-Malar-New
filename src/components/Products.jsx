@@ -30,6 +30,7 @@ const SCHEMES = [
     id: 'rd',
     code: 'RD',
     tabLabel: 'Recurring Deposit',
+    hook: '12–60 months · from ₹200/month',
     title: 'Recurring Deposit (RD)',
     intro:
       'Recurring Deposit accounts may be opened by members of the Society. The minimum period is 12 months and the maximum is 60 months. Accounts can be opened with a minimum monthly installment of ₹200, in multiples of ₹100 thereafter, up to a maximum of ₹20,000 per month.',
@@ -47,6 +48,7 @@ const SCHEMES = [
     id: 'sb',
     code: 'SB',
     tabLabel: 'Savings Deposit',
+    hook: 'Everyday member savings account',
     title: 'Savings Deposit',
     intro:
       'A Savings Deposit account can be opened by submitting the application form together with the required KYC documents — Aadhaar Card, Passport, PAN Card, or Voter ID, along with a Ration Card (any two of these are compulsory).',
@@ -64,6 +66,7 @@ const SCHEMES = [
     id: 'fd',
     code: 'FD',
     tabLabel: 'Fixed Deposit',
+    hook: '1–10 years · lump-sum deposit',
     title: 'Fixed Deposit (FD)',
     intro:
       'Fixed Deposits are accepted from members of the Society. The minimum period of deposit is 1 year and the maximum is 10 years. Minimum deposit amount is ₹25,000, in multiples of ₹1,000 thereafter, up to a maximum of ₹50,00,000.',
@@ -79,8 +82,7 @@ const SCHEMES = [
 ]
 
 export default function Products() {
-  const [activeId, setActiveId] = useState(SCHEMES[0].id)
-  const active = SCHEMES.find((scheme) => scheme.id === activeId)
+  const [openId, setOpenId] = useState(SCHEMES[0].id)
 
   return (
     <section id="products" className="section">
@@ -97,34 +99,59 @@ export default function Products() {
         </Reveal>
 
         <Reveal>
-          <div className="product-tabs" role="tablist" aria-label="Deposit schemes">
-            {SCHEMES.map((scheme) => (
-              <button
-                key={scheme.id}
-                type="button"
-                role="tab"
-                aria-selected={scheme.id === activeId}
-                className={`product-tab ${scheme.id === activeId ? 'product-tab--active' : ''}`}
-                onClick={() => setActiveId(scheme.id)}
-              >
-                <span className="product-tab-code">{scheme.code}</span>
-                {scheme.tabLabel}
-              </button>
-            ))}
-          </div>
+          <div className="product-accordion">
+            {SCHEMES.map((scheme) => {
+              const isOpen = scheme.id === openId
+              return (
+                <div key={scheme.id} className={`product-item ${isOpen ? 'product-item--open' : ''}`}>
+                  <button
+                    type="button"
+                    className="product-item-header"
+                    aria-expanded={isOpen}
+                    aria-controls={`product-panel-${scheme.id}`}
+                    onClick={() => setOpenId(isOpen ? null : scheme.id)}
+                  >
+                    <span className="product-item-code">{scheme.code}</span>
+                    <span className="product-item-heading">
+                      <strong>{scheme.tabLabel}</strong>
+                      <span>{scheme.hook}</span>
+                    </span>
+                    <svg
+                      className="product-item-chevron"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M5 7.5L10 12.5L15 7.5"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
 
-          <article className={`product-panel ${active.rates ? 'product-panel--split' : ''}`}>
-            <div className="product-copy">
-              <h3>{active.title}</h3>
-              <p>{active.intro}</p>
-              <ul className="product-terms">
-                {active.terms.map((term) => (
-                  <li key={term}>{term}</li>
-                ))}
-              </ul>
-            </div>
-            {active.rates && <RateTable columns={RATE_COLUMNS} rows={active.rates} />}
-          </article>
+                  {isOpen && (
+                    <div id={`product-panel-${scheme.id}`} className="product-item-body">
+                      <div className={scheme.rates ? 'product-body-split' : ''}>
+                        <div className="product-copy">
+                          <h3>{scheme.title}</h3>
+                          <p>{scheme.intro}</p>
+                          <ul className="product-terms">
+                            {scheme.terms.map((term) => (
+                              <li key={term}>{term}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        {scheme.rates && <RateTable columns={RATE_COLUMNS} rows={scheme.rates} />}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
         </Reveal>
 
         <Reveal>
