@@ -5,12 +5,11 @@ import './Header.css'
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
-  { to: '/members', label: 'Members' },
-  { to: '/products', label: 'Products' },
-  { to: '/loans', label: 'Loans' },
-  { to: '/leadership', label: 'Our Leadership Team' },
-  { to: '/archive', label: 'Archive' },
-  { to: '/contact', label: 'Contact Us' },
+  { to: '/about', label: 'About' },
+  { to: '/products', label: 'Products & Services' },
+  { to: '/impact', label: 'Our Impact' },
+  { to: '/leadership', label: 'Governance & Leadership' },
+  { to: '/contact', label: 'Contact' },
 ]
 
 export default function Header() {

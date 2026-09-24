@@ -12,20 +12,32 @@ export default function Hero() {
         <div className="hero-content">
           <span className="hero-eyebrow">Est. 2008 · Multi-State Co-operative Society</span>
           <h1>
-            <span className="hero-highlight">Rose Malar</span> Developmental
-            Co&#8209;operative Society Limited
+            <span className="hero-highlight">Together We Grow.</span> Together
+            We Prosper.
           </h1>
           <p className="hero-lead">
-            A registered Multi-State Co-operative Society helping members build
-            financial security through savings, deposits, and loans — rooted in
-            self-help and mutual assistance.
+            <strong>
+              Empowering Communities. Enriching Lives. Enhancing Growth.
+            </strong>
+          </p>
+          <p className="hero-lead">
+            Rose Malar Developmental Co-operative Society Limited is a
+            Multi-State Co-operative Society committed to promoting the
+            economic and social well-being of its members through self-help
+            and mutual assistance.
+          </p>
+          <p className="hero-lead">
+            Through savings, deposits, credit facilities, financial education,
+            livelihood development and community initiatives, we work to
+            create opportunities that help individuals, families and
+            communities move towards a more secure and sustainable future.
           </p>
           <div className="hero-actions">
             <a href="#members" className="btn btn-primary">
               Become a Member
             </a>
             <a href="#products" className="btn btn-outline btn-outline--dark">
-              Explore Deposit Schemes
+              Explore Our Products
             </a>
           </div>
         </div>
@@ -53,6 +65,13 @@ export default function Hero() {
           <a href="#products" className="hero-card-link">
             View all rates
           </a>
+
+          <p className="hero-card-note">
+            The Annual Report describes RMDCS as a Multi-State Co-operative
+            Society focused on economic and social well-being, financial
+            services, entrepreneurship, financial literacy and sustainable
+            livelihood development.
+          </p>
         </aside>
       </div>
     </section>

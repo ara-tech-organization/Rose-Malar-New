@@ -1,0 +1,23 @@
+.impact-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.impact-tag {
+  padding: 10px 20px;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.impact-cta {
+  margin-top: 32px;
+  text-align: center;
+}

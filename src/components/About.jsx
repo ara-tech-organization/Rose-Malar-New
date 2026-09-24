@@ -26,18 +26,28 @@ const FACTS = [
 
 export default function About() {
   return (
-    <section className="section about">
+    <section id="about" className="section about">
       <div className="container">
         <Reveal>
           <div className="section-header section-header--center">
-            <span className="section-eyebrow">About Us</span>
-            <h2>Who We Are</h2>
+            <span className="section-eyebrow">Who We Are</span>
+            <h2>A Cooperative Built Around People</h2>
             <p>
-              Rose Malar Developmental Co-operative Society Limited (RMDCS) is
-              a registered Multi-State Co-operative Society helping members
-              build financial security through self-help and mutual
-              assistance.
+              Founded in 2008, Rose Malar Developmental Co-operative Society
+              Limited was established with a vision of promoting self-help,
+              mutual assistance and the economic and social well-being of its
+              members.
             </p>
+            <p>
+              Over the years, Rose Malar has expanded its financial services,
+              member outreach and development initiatives while continuing to
+              strengthen its governance and community-focused approach.
+            </p>
+            <div className="about-cta">
+              <a href="#leadership" className="btn btn-outline btn-outline--dark">
+                Learn More About Us
+              </a>
+            </div>
           </div>
         </Reveal>
 

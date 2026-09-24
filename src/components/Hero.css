@@ -35,8 +35,16 @@
 .hero-lead {
   color: var(--text-muted);
   font-size: 1rem;
+  margin-bottom: 16px;
+  max-width: 480px;
+}
+
+.hero-lead:last-of-type {
   margin-bottom: 28px;
-  max-width: 460px;
+}
+
+.hero-lead strong {
+  color: var(--blue-900);
 }
 
 .hero-actions {
@@ -157,6 +165,14 @@
   transform: translateX(3px);
 }
 
+.hero-card-note {
+  padding: 14px 24px 18px;
+  border-top: 1px solid var(--border);
+  font-size: 0.74rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
 @media (min-width: 768px) {
   .hero {
     padding-block: 64px;
@@ -175,5 +191,19 @@
 
   .hero-lead {
     font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr 420px;
+  }
+
+  .hero h1 {
+    max-width: 22ch;
+  }
+
+  .hero-lead {
+    max-width: 640px;
   }
 }

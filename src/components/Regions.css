@@ -1,0 +1,33 @@
+.region-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.region-chip {
+  padding: 10px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue-900);
+  border-radius: var(--radius-pill);
+  color: var(--blue-900);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.region-note {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.region-cta {
+  margin-top: 24px;
+  text-align: center;
+}
