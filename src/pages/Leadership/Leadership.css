@@ -1,155 +1,332 @@
-.leader-list {
+/* Hero / intro */
+
+.gov-hero .section-header {
+  max-width: 700px;
+}
+
+.gov-hero p + p {
+  margin-top: 12px;
+}
+
+/* Board of Directors */
+
+.board-grid {
   display: grid;
-  gap: 14px;
-}
-
-.leader-row {
-  display: flex;
-  align-items: center;
   gap: 16px;
-  padding: 18px 20px;
-  border-radius: var(--radius-md);
 }
 
-.leader-row--chair {
-  background: var(--blue-900);
-  box-shadow: var(--shadow-card);
-}
-
-.leader-row--open {
-  border: 1px dashed var(--border);
+.board-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 20px;
   background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.leader-row--teal {
-  border-color: color-mix(in srgb, var(--accent-teal) 45%, var(--border));
+.board-card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
 }
 
-.leader-row--teal .leader-row-avatar--open {
-  border-color: var(--accent-teal);
-  color: var(--accent-teal);
+.board-card--chair {
+  background: linear-gradient(160deg, var(--blue-950), var(--blue-900) 70%);
+  border: none;
 }
 
-.leader-row--indigo {
-  border-color: color-mix(in srgb, var(--accent-indigo) 45%, var(--border));
-}
-
-.leader-row--indigo .leader-row-avatar--open {
-  border-color: var(--accent-indigo);
-  color: var(--accent-indigo);
-}
-
-.leader-row--coral {
-  border-color: color-mix(in srgb, var(--accent-coral) 45%, var(--border));
-}
-
-.leader-row--coral .leader-row-avatar--open {
-  border-color: var(--accent-coral);
-  color: var(--accent-coral);
-}
-
-.leader-row-avatar {
+.board-card-avatar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 16px;
   border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.leader-row-avatar--chair {
-  border: 2px solid var(--blue-500);
-  background: var(--blue-950);
-  color: var(--white);
+  background: var(--blue-100);
+  color: var(--blue-700);
   font-weight: 700;
   font-size: 1.05rem;
 }
 
-.leader-row-avatar--open {
-  border: 1px dashed var(--border);
-  color: var(--text-muted);
-}
-
-.leader-row-avatar--open svg {
-  width: 20px;
-  height: 20px;
-}
-
-.leader-row-body {
-  flex: 1;
-  min-width: 0;
-}
-
-.leader-row-tag {
-  display: block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--blue-500);
-  margin-bottom: 3px;
-}
-
-.leader-row--open .leader-row-tag {
-  color: var(--text-muted);
-}
-
-.leader-row-body h3 {
-  font-size: 1rem;
-  margin: 0;
-}
-
-.leader-row--chair .leader-row-body h3 {
+.board-card--chair .board-card-avatar {
+  background: var(--blue-950);
+  border: 2px solid var(--blue-500);
   color: var(--white);
 }
 
-.leader-row--open .leader-row-body h3 {
-  color: var(--text-muted);
-  font-weight: 500;
+.board-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
 }
 
-.leader-row-status {
-  flex-shrink: 0;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  white-space: nowrap;
+.board-card--chair h3 {
+  color: var(--white);
 }
 
-.leader-row-status--chair {
+.board-card-role {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-500);
+}
+
+.board-card--chair .board-card-role {
   color: #dba8cb;
 }
 
+/* Advisory Group */
+
+.advisory-split {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+}
+
+.advisory-copy p {
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+.advisory-copy .section-eyebrow {
+  margin-top: 4px;
+}
+
+.advisory-copy h2 {
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+.advisory-visual {
+  display: flex;
+  align-items: center;
+  padding: 36px 24px;
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.advisory-visual-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 1px var(--border);
+  margin-left: -14px;
+}
+
+.advisory-visual-avatar:first-child {
+  margin-left: 0;
+}
+
+.advisory-visual-note {
+  width: 100%;
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Committees */
+
+.committee-list {
+  display: grid;
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.committee-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px 22px;
+  background: var(--white);
+}
+
+.committee-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--blue-100);
+  color: var(--blue-700);
+}
+
+.committee-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.committee-icon--teal {
+  background: color-mix(in srgb, var(--accent-teal) 16%, var(--white));
+  color: var(--accent-teal);
+}
+
+.committee-icon--magenta {
+  background: color-mix(in srgb, var(--accent-magenta) 14%, var(--white));
+  color: var(--accent-magenta);
+}
+
+.committee-icon--indigo {
+  background: color-mix(in srgb, var(--accent-indigo) 12%, var(--white));
+  color: var(--accent-indigo);
+}
+
+.committee-icon--coral {
+  background: color-mix(in srgb, var(--accent-coral) 20%, var(--white));
+  color: var(--accent-coral);
+}
+
+.committee-body h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.committee-body p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.committee-note {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Our People band */
+
+.people-band {
+  padding-block: 56px;
+  background: linear-gradient(160deg, var(--blue-950), var(--blue-900) 70%);
+}
+
+.people-band-inner {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.people-band-inner .section-eyebrow {
+  color: var(--blue-500);
+}
+
+.people-band-inner h2 {
+  color: var(--white);
+  font-size: 1.6rem;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.people-band-inner p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.people-band-inner p + p {
+  margin-top: 12px;
+}
+
+/* Looking Ahead */
+
+.priority-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.priority-card {
+  padding: 22px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.priority-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+}
+
+.priority-dot--teal {
+  background: var(--accent-teal);
+}
+
+.priority-dot--magenta {
+  background: var(--accent-magenta);
+}
+
+.priority-dot--indigo {
+  background: var(--accent-indigo);
+}
+
+.priority-dot--coral {
+  background: var(--accent-coral);
+}
+
+.priority-card h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.priority-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+/* Responsive */
+
 @media (min-width: 576px) {
-  .leader-row {
-    padding: 22px 28px;
+  .board-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .leader-row-avatar {
-    width: 64px;
-    height: 64px;
+  .priority-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .board-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .leader-row-body h3 {
-    font-size: 1.1rem;
+  .committee-row {
+    padding: 24px 28px;
+  }
+
+  .people-band {
+    padding-block: 72px;
+  }
+
+  .people-band-inner h2 {
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 992px) {
-  .leader-list {
+  .board-grid {
     grid-template-columns: repeat(4, 1fr);
-    align-items: stretch;
   }
 
-  .leader-row {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 14px;
-    height: 100%;
+  .advisory-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
   }
 
-  .leader-row-status {
-    white-space: normal;
+  .priority-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

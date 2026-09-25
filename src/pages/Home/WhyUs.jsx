@@ -1,4 +1,4 @@
-import Reveal from './Reveal'
+import Reveal from '../../components/Reveal'
 import './WhyUs.css'
 
 const ACCENTS = ['teal', 'magenta', 'indigo', 'coral']

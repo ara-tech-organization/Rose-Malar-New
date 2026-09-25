@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Hero.css'
 
 const HIGHLIGHTS = [
@@ -33,12 +34,12 @@ export default function Hero() {
             communities move towards a more secure and sustainable future.
           </p>
           <div className="hero-actions">
-            <a href="#members" className="btn btn-primary">
+            <Link to="/contact" className="btn btn-primary">
               Become a Member
-            </a>
-            <a href="#products" className="btn btn-outline btn-outline--dark">
+            </Link>
+            <Link to="/products" className="btn btn-outline btn-outline--dark">
               Explore Our Products
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -62,9 +63,9 @@ export default function Hero() {
             ))}
           </ul>
 
-          <a href="#products" className="hero-card-link">
+          <Link to="/products" className="hero-card-link">
             View all rates
-          </a>
+          </Link>
 
           <p className="hero-card-note">
             The Annual Report describes RMDCS as a Multi-State Co-operative

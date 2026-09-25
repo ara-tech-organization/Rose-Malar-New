@@ -1,4 +1,5 @@
-import Reveal from './Reveal'
+import { Link } from 'react-router-dom'
+import Reveal from '../../components/Reveal'
 import './JoinCta.css'
 
 export default function JoinCta() {
@@ -14,9 +15,9 @@ export default function JoinCta() {
               building your home, Rose Malar is committed to supporting its
               members.
             </p>
-            <a href="#members" className="btn btn-primary">
+            <Link to="/contact" className="btn btn-primary">
               Become a Member
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

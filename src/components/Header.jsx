@@ -23,9 +23,10 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="container site-header-main">
+      <div className="site-header-main">
         <Link to="/" className="brand">
           <img src={logo} alt="Rose Malar Developmental Co-operative Society Ltd." className="brand-mark" />
+          <span className="brand-name">Rose Malar</span>
         </Link>
 
         <button
@@ -52,7 +53,25 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
+
+          <div className="site-nav-actions">
+            <a href="tel:+914146240683" className="btn btn-outline--dark btn-sm">
+              Call Now
+            </a>
+            <Link to="/contact" className="btn btn-primary btn-sm" onClick={() => setMenuOpen(false)}>
+              Book Now
+            </Link>
+          </div>
         </nav>
+
+        <div className="site-header-actions">
+          <a href="tel:+914146240683" className="btn btn-outline--dark btn-sm">
+            Call Now
+          </a>
+          <Link to="/contact" className="btn btn-primary btn-sm">
+            Book Now
+          </Link>
+        </div>
       </div>
     </header>
   )

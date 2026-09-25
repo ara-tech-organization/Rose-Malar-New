@@ -1,10 +1,10 @@
-.growth-grid {
+.loan-performance-grid {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.growth-card {
+.loan-performance-card {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -16,23 +16,23 @@
   box-shadow: none;
 }
 
-.growth-card--teal {
+.loan-performance-card--teal {
   background: rgba(79, 184, 199, 0.12);
 }
 
-.growth-card--magenta {
+.loan-performance-card--magenta {
   background: rgba(156, 47, 116, 0.1);
 }
 
-.growth-card--indigo {
+.loan-performance-card--indigo {
   background: rgba(51, 50, 127, 0.1);
 }
 
-.growth-card--coral {
+.loan-performance-card--coral {
   background: rgba(242, 164, 143, 0.16);
 }
 
-.growth-icon {
+.loan-performance-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -43,28 +43,28 @@
   color: var(--white);
 }
 
-.growth-icon svg {
+.loan-performance-icon svg {
   width: 22px;
   height: 22px;
 }
 
-.growth-card--teal .growth-icon {
+.loan-performance-card--teal .loan-performance-icon {
   background: var(--accent-teal);
 }
 
-.growth-card--magenta .growth-icon {
+.loan-performance-card--magenta .loan-performance-icon {
   background: var(--accent-magenta);
 }
 
-.growth-card--indigo .growth-icon {
+.loan-performance-card--indigo .loan-performance-icon {
   background: var(--accent-indigo);
 }
 
-.growth-card--coral .growth-icon {
+.loan-performance-card--coral .loan-performance-icon {
   background: var(--accent-coral);
 }
 
-.growth-value {
+.loan-performance-value {
   display: block;
   font-size: 1.6rem;
   font-weight: 700;
@@ -73,42 +73,34 @@
   margin-top: auto;
 }
 
-.growth-label {
+.loan-performance-label {
   display: block;
   font-size: 0.85rem;
   color: var(--text-muted);
 }
 
-.growth-note {
-  margin-top: 24px;
-  text-align: center;
-  font-size: 0.82rem;
-  font-style: italic;
-  color: var(--text-muted);
-}
-
 @media (min-width: 576px) {
-  .growth-grid {
+  .loan-performance-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 992px) {
-  .growth-grid {
-    grid-template-columns: repeat(6, 1fr);
+  .loan-performance-grid {
+    grid-template-columns: repeat(5, 1fr);
     gap: 14px;
   }
 
-  .growth-card {
+  .loan-performance-card {
     min-height: 168px;
-    padding: 18px 16px;
+    padding: 20px 18px;
   }
 
-  .growth-value {
-    font-size: 1.3rem;
+  .loan-performance-value {
+    font-size: 1.35rem;
   }
 
-  .growth-label {
+  .loan-performance-label {
     font-size: 0.8rem;
   }
 }

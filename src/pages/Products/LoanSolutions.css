@@ -1,0 +1,58 @@
+.loan-solutions-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.loan-solutions-card {
+  padding: 22px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.loan-solutions-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+}
+
+.loan-solutions-dot--teal {
+  background: var(--accent-teal);
+}
+
+.loan-solutions-dot--magenta {
+  background: var(--accent-magenta);
+}
+
+.loan-solutions-dot--indigo {
+  background: var(--accent-indigo);
+}
+
+.loan-solutions-dot--coral {
+  background: var(--accent-coral);
+}
+
+.loan-solutions-card h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.loan-solutions-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+@media (min-width: 576px) {
+  .loan-solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .loan-solutions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

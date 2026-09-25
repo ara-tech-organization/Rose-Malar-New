@@ -1,4 +1,4 @@
-import Reveal from './Reveal'
+import Reveal from '../../components/Reveal'
 import './Archive.css'
 
 const TILE_COUNT = 5

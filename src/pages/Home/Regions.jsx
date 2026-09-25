@@ -1,4 +1,5 @@
-import Reveal from './Reveal'
+import { Link } from 'react-router-dom'
+import Reveal from '../../components/Reveal'
 import './Regions.css'
 
 const STATES = [
@@ -41,9 +42,9 @@ export default function Regions() {
 
         <Reveal>
           <div className="region-cta">
-            <a href="#contact" className="btn btn-primary">
+            <Link to="/contact" className="btn btn-primary">
               Find Us / Contact Us
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

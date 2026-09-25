@@ -1,0 +1,79 @@
+.group-grid {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.group-card {
+  padding: 24px 22px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.group-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  border-radius: var(--radius-pill);
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.group-logo--teal {
+  background: rgba(79, 184, 199, 0.16);
+  color: var(--accent-teal);
+}
+
+.group-logo--magenta {
+  background: rgba(156, 47, 116, 0.14);
+  color: var(--accent-magenta);
+}
+
+.group-logo--indigo {
+  background: rgba(51, 50, 127, 0.12);
+  color: var(--accent-indigo);
+}
+
+.group-logo--coral {
+  background: rgba(242, 164, 143, 0.22);
+  color: var(--accent-coral);
+}
+
+.group-card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.group-card-desc {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  font-style: italic;
+}
+
+.group-card-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+@media (min-width: 576px) {
+  .group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .group-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

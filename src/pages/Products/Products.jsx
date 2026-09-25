@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Reveal from './Reveal'
+import Reveal from '../../components/Reveal'
 import RateTable from './RateTable'
 import './Products.css'
 
@@ -85,12 +85,12 @@ export default function Products() {
   const [openId, setOpenId] = useState(SCHEMES[0].id)
 
   return (
-    <section id="products" className="section">
+    <section className="section section--surface">
       <div className="container">
         <Reveal>
           <div className="section-header">
-            <span className="section-eyebrow">Products</span>
-            <h2>Deposit schemes</h2>
+            <span className="section-eyebrow">Rates &amp; Terms</span>
+            <h2>Deposit scheme details</h2>
             <p>
               RMDCS offers deposit schemes for members across every stage of saving —
               from a fixed monthly commitment to a lump-sum term deposit.

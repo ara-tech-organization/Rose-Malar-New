@@ -2,20 +2,40 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/Logo.png'
 import './Footer.css'
 
-const NAV_LINKS = [
+const QUICK_LINKS = [
   { to: '/', label: 'Home' },
-  { to: '/members', label: 'Members' },
-  { to: '/products', label: 'Products' },
-  { to: '/loans', label: 'Loans' },
-  { to: '/leadership', label: 'Our Leadership Team' },
-  { to: '/archive', label: 'Archive' },
+  { to: '/about', label: 'About Us' },
+  { to: '/products', label: 'Products & Services' },
+  { to: '/impact', label: 'Our Impact' },
+  { to: '/leadership', label: 'Governance' },
+  { to: '/contact', label: 'Contact' },
+]
+
+const PRODUCT_LINKS = [
+  { to: '/products', label: 'Savings' },
+  { to: '/products', label: 'Recurring Deposit' },
+  { to: '/products', label: 'Fixed Deposit' },
+  { to: '/products', label: 'Loans' },
+  { to: '/impact', label: 'Housing Finance' },
+]
+
+const RESOURCE_LINKS = [
+  { to: null, label: 'Annual Report' },
+  { to: '/contact', label: 'Deposit Calculator' },
+  { to: '/contact', label: 'FAQ' },
+]
+
+const CONNECT_LINKS = [
+  { to: '/contact', label: 'Membership Enquiry' },
+  { to: '/contact', label: 'Loan Enquiry' },
   { to: '/contact', label: 'Contact Us' },
 ]
 
-const CONTACT_ITEMS = [
-  { label: 'Address', value: 'Branch address to be confirmed' },
-  { label: 'Phone', value: 'To be confirmed' },
-  { label: 'Email', value: 'To be confirmed' },
+const FOOTER_COLUMNS = [
+  { heading: 'Quick Links', links: QUICK_LINKS },
+  { heading: 'Products', links: PRODUCT_LINKS },
+  { heading: 'Resources', links: RESOURCE_LINKS },
+  { heading: 'Connect', links: CONNECT_LINKS },
 ]
 
 export default function Footer() {
@@ -27,33 +47,27 @@ export default function Footer() {
         <div className="footer-brand">
           <img src={logo} alt="RMDCS logo" className="footer-logo" />
           <p>Rose Malar Developmental Co-operative Society Limited</p>
-          <p className="footer-muted">
-            Regd. under the Multi-State Co-operative Societies Act, 2002.
-          </p>
+          <p className="footer-tagline">Together We Grow. Together We Prosper.</p>
         </div>
 
-        <div>
-          <h3 className="footer-heading">Quick Links</h3>
-          <nav className="footer-links">
-            {NAV_LINKS.map((link) => (
-              <Link key={link.to} to={link.to}>
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        <div>
-          <h3 className="footer-heading">Get in Touch</h3>
-          <ul className="footer-contact">
-            {CONTACT_ITEMS.map((item) => (
-              <li key={item.label}>
-                <span className="footer-contact-label">{item.label}</span>
-                <span className="footer-contact-value">{item.value}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {FOOTER_COLUMNS.map((column) => (
+          <div key={column.heading}>
+            <h3 className="footer-heading">{column.heading}</h3>
+            <nav className="footer-links">
+              {column.links.map((link) =>
+                link.to ? (
+                  <Link key={link.label} to={link.to}>
+                    {link.label}
+                  </Link>
+                ) : (
+                  <span key={link.label} className="footer-link-pending">
+                    {link.label}
+                  </span>
+                )
+              )}
+            </nav>
+          </div>
+        ))}
       </div>
 
       <div className="container footer-bottom">

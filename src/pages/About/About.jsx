@@ -1,27 +1,73 @@
-import Reveal from './Reveal'
+import Reveal from '../../components/Reveal'
 import './About.css'
 
-const FACTS = [
+const JOURNEY = [
   {
-    tag: 'Registered Entity',
-    title: 'Multi-State Co-operative Society',
-    text: 'Registered with the Ministry of Agriculture and Farmers Welfare, Government of India.',
+    year: '2008',
+    title: 'Foundation',
+    text: 'Rose Malar Developmental Co-operative Society Limited was founded by the late Shri R. Bhakther Solomon, Founder of the Development Promotion Group.',
   },
   {
-    tag: 'Est. 2008',
-    title: 'Founded by Late Shri R. Bhakther Solomon',
-    text: 'Established under the Multi-State Co-operative Societies Act, 2002.',
+    year: '2018',
+    title: 'A New Chapter',
+    text: 'On 10 May 2018, a new governing committee was elected at the Annual General Body Meeting, with Mrs. Prabala Jabeegara Ross assuming leadership as Chairperson.',
   },
   {
-    tag: 'Since 2018',
-    title: 'New Chairmanship',
-    text: "Carrying forward the Society's mission under its current leadership.",
+    year: 'Today',
+    title: 'Continuing the Mission',
+    text: 'Rose Malar continues to strengthen its financial services, governance, member outreach and development initiatives across multiple regions.',
+  },
+]
+
+const VISION_MISSION = [
+  {
+    label: 'Our Vision',
+    title: 'Promoting Economic and Social Well-Being',
+    text: 'To promote the economic and social well-being of our members by way of self-help and mutual assistance.',
   },
   {
-    tag: 'Our Mission',
-    title: 'One-stop financial services',
-    text: 'Promoting entrepreneurship, financial literacy, wealth creation and management, and livelihood development.',
+    label: 'Our Mission',
+    title: 'Strengthening Self-Help Through Collective Action',
+    text: 'To institutionalise the efforts of members in the promotion and development of self-help and mutual aid through collective action and seek simple and effective solutions to social and economic problems.',
   },
+]
+
+const ACCENTS = ['teal', 'magenta', 'indigo', 'coral']
+
+const ACTIVITIES = [
+  {
+    title: 'Entrepreneurship & Investment',
+    text: 'Promoting and supporting entrepreneurial and investment activities among members.',
+  },
+  {
+    title: 'Financial Education',
+    text: 'Providing cooperative and financial management education and training.',
+  },
+  {
+    title: 'Financial Independence',
+    text: 'Supporting money management, financial independence and asset creation.',
+  },
+  {
+    title: 'Livelihood Development',
+    text: 'Supporting development, production, manufacturing, marketing and livelihood-related activities.',
+  },
+  {
+    title: 'Agriculture & Rural Development',
+    text: 'Supporting farm and non-farm activities and rural communities.',
+  },
+  {
+    title: 'Sustainable Development',
+    text: 'Encouraging environmental care and sustainability.',
+  },
+]
+
+const VALUES = [
+  'Trust',
+  'Transparency',
+  'Governance',
+  'Customer Satisfaction',
+  'Sustainability',
+  'Innovation',
 ]
 
 export default function About() {
@@ -31,49 +77,85 @@ export default function About() {
         <Reveal>
           <div className="section-header section-header--center">
             <span className="section-eyebrow">Who We Are</span>
-            <h2>A Cooperative Built Around People</h2>
+            <h2>Building Economic Opportunity Through Cooperation</h2>
             <p>
-              Founded in 2008, Rose Malar Developmental Co-operative Society
-              Limited was established with a vision of promoting self-help,
-              mutual assistance and the economic and social well-being of its
-              members.
+              Rose Malar Developmental Co-operative Society Limited is a
+              Multi-State Co-operative Society registered under the
+              Multi-State Co-operative Societies Act, 2002, with India&rsquo;s
+              Ministry of Co-operation.
             </p>
             <p>
-              Over the years, Rose Malar has expanded its financial services,
-              member outreach and development initiatives while continuing to
-              strengthen its governance and community-focused approach.
+              Founded in 2008, the Society was established to promote the
+              economic and social well-being of its members through self-help
+              and mutual assistance.
             </p>
-            <div className="about-cta">
-              <a href="#leadership" className="btn btn-outline btn-outline--dark">
-                Learn More About Us
-              </a>
+            <p>
+              The Society&rsquo;s approach combines financial services with
+              entrepreneurship support, financial literacy, livelihood
+              development and community-oriented initiatives.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="about-journey">
+            <h3 className="about-block-title">Our Journey</h3>
+            <div className="about-journey-grid">
+              {JOURNEY.map((step) => (
+                <div key={step.year} className="about-journey-item">
+                  <span className="about-journey-year">{step.year}</span>
+                  <h4>{step.title}</h4>
+                  <p>{step.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>
 
         <Reveal>
-          <div className="about-fact-grid">
-            {FACTS.map((fact) => (
-              <div key={fact.title} className="about-fact-card">
-                <span className="about-fact-tag">{fact.tag}</span>
-                <h3>{fact.title}</h3>
-                <p>{fact.text}</p>
+          <div className="about-vm-grid">
+            {VISION_MISSION.map((item) => (
+              <div key={item.label} className="about-vm-card">
+                <span className="about-vm-label">{item.label}</span>
+                <h4>{item.title}</h4>
+                <p>{item.text}</p>
               </div>
             ))}
           </div>
         </Reveal>
 
         <Reveal>
-          <blockquote className="about-vision">
-            <span className="about-vision-mark" aria-hidden="true">
-              &ldquo;
-            </span>
-            <p>
-              Promotion of economic and social well-being of its members by
-              way of self-help and mutual assistance.
+          <div className="about-activities">
+            <h3 className="about-block-title">What We Do</h3>
+            <p className="about-activities-intro">
+              Rose Malar&rsquo;s activities include:
             </p>
-            <cite>Our Vision</cite>
-          </blockquote>
+            <div className="about-activities-grid">
+              {ACTIVITIES.map((activity, i) => (
+                <div key={activity.title} className="about-activity-card">
+                  <span
+                    className={`about-activity-dot about-activity-dot--${ACCENTS[i % ACCENTS.length]}`}
+                    aria-hidden="true"
+                  />
+                  <h4>{activity.title}</h4>
+                  <p>{activity.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="about-values">
+            <h3 className="about-block-title">Our Values</h3>
+            <ul className="about-values-list">
+              {VALUES.map((value) => (
+                <li key={value} className="about-values-tag">
+                  {value}
+                </li>
+              ))}
+            </ul>
+          </div>
         </Reveal>
       </div>
     </section>

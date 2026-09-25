@@ -1,11 +1,10 @@
-import { useState } from 'react'
-import Reveal from './Reveal'
+import Reveal from '../../components/Reveal'
 import './Contact.css'
 
 const INFO = [
   {
-    label: 'Address',
-    value: 'Branch address to be confirmed',
+    label: 'Registered & Administrative Office',
+    value: ['No. 454, BWDA Enclave,', 'East Pondy Road,', 'Villupuram – 605602, Tamil Nadu'],
     icon: (
       <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
         <path
@@ -21,7 +20,7 @@ const INFO = [
   },
   {
     label: 'Phone',
-    value: 'To be confirmed',
+    value: ['+91-4146-240683', '+91-4146-243861', '+91-4146-227966'],
     icon: (
       <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
         <path
@@ -36,7 +35,7 @@ const INFO = [
   },
   {
     label: 'Email',
-    value: 'To be confirmed',
+    value: ['rmdcs2008@gmail.com', 'cooperativesociety@bwda.org.in'],
     icon: (
       <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
         <rect x="3.5" y="5.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -47,21 +46,13 @@ const INFO = [
 ]
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-
-  function handleChange(event) {
-    const { name, value } = event.target
-    setForm((prev) => ({ ...prev, [name]: value }))
-  }
-
   return (
     <section id="contact" className="section">
       <div className="container">
         <Reveal>
           <div className="section-header section-header--center">
             <span className="section-eyebrow">Contact Us</span>
-            <h2>Get in touch</h2>
-            <p>Reach out to your nearest RMDCS branch for enquiries about membership, deposits, or loans.</p>
+            <h2>We&rsquo;re Here to Help</h2>
           </div>
         </Reveal>
 
@@ -74,38 +65,15 @@ export default function Contact() {
                 </span>
                 <div>
                   <span className="contact-label">{item.label}</span>
-                  <span className="contact-value">{item.value}</span>
+                  {item.value.map((line) => (
+                    <span key={line} className="contact-value">
+                      {line}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
-        </Reveal>
-
-        <Reveal>
-          <form className="contact-form-card" onSubmit={(event) => event.preventDefault()}>
-            <div className="contact-form-grid">
-              <label>
-                Name
-                <input type="text" name="name" value={form.name} onChange={handleChange} />
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" value={form.email} onChange={handleChange} />
-              </label>
-            </div>
-            <label>
-              Message
-              <textarea name="message" rows="3" value={form.message} onChange={handleChange} />
-            </label>
-            <div className="contact-form-footer">
-              <button type="submit" className="btn btn-primary" disabled>
-                Send Enquiry
-              </button>
-              <p className="contact-form-note">
-                This form will be connected once branch contact details are confirmed.
-              </p>
-            </div>
-          </form>
         </Reveal>
       </div>
     </section>

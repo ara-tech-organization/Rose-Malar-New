@@ -53,17 +53,6 @@
   flex-wrap: wrap;
 }
 
-.hero-actions .btn-outline--dark {
-  border-color: var(--border);
-  color: var(--blue-900);
-}
-
-.hero-actions .btn-outline--dark:hover {
-  background: var(--blue-900);
-  border-color: var(--blue-900);
-  color: var(--white);
-}
-
 .hero-card {
   background: var(--white);
   border: 1px solid var(--border);

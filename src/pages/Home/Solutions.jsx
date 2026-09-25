@@ -1,4 +1,5 @@
-import Reveal from './Reveal'
+import { Link } from 'react-router-dom'
+import Reveal from '../../components/Reveal'
 import './Solutions.css'
 
 const SOLUTIONS = [
@@ -49,9 +50,9 @@ export default function Solutions() {
 
         <Reveal>
           <div className="solutions-cta">
-            <a href="#products" className="btn btn-primary">
+            <Link to="/products" className="btn btn-primary">
               Explore Products &amp; Services
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

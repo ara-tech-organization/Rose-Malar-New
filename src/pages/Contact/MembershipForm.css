@@ -1,0 +1,79 @@
+.membership {
+  background: var(--surface);
+}
+
+.membership-form-card {
+  display: grid;
+  gap: 18px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.membership-form-card h3 {
+  font-size: 1.1rem;
+}
+
+.membership-form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.membership-form-card label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.membership-form-full {
+  grid-column: 1 / -1;
+}
+
+.membership-form-card input,
+.membership-form-card select,
+.membership-form-card textarea {
+  font-family: var(--font-body);
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--white);
+  resize: vertical;
+}
+
+.membership-form-card input:focus,
+.membership-form-card select:focus,
+.membership-form-card textarea:focus {
+  outline: 2px solid var(--blue-500);
+  outline-offset: 1px;
+}
+
+.membership-form-footer {
+  display: grid;
+  gap: 12px;
+}
+
+.membership-form-success {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--blue-700);
+}
+
+@media (min-width: 576px) {
+  .membership-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .membership-form-card {
+    padding: 40px;
+  }
+}
