@@ -39,9 +39,9 @@
 }
 
 .footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 16px;
 }
 
 .footer-links a,
@@ -83,6 +83,10 @@
 
   .footer-brand {
     grid-column: 1 / -1;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
   }
 }
 
