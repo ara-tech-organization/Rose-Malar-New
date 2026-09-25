@@ -45,7 +45,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <img src={logo} alt="RMDCS logo" className="footer-logo" />
+          <img src={logo} alt="RMDCS logo" className="footer-logo" loading="lazy" decoding="async" />
           <p>Rose Malar Developmental Co-operative Society Limited</p>
           <p className="footer-tagline">Together We Grow. Together We Prosper.</p>
         </div>
