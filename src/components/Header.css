@@ -82,7 +82,7 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  gap: 25px;
+  gap: 16px;
 }
 
 .site-nav-actions {
@@ -101,7 +101,7 @@
   font-size: 0.8rem;
 }
 
-@media (min-width: 1320px) {
+@media (min-width: 1380px) {
   .site-header-actions {
     display: flex;
   }
@@ -110,7 +110,7 @@
 .site-nav-link {
   position: relative;
   color: var(--text);
-  font-size: 0.86rem;
+  font-size: 0.82rem;
   font-weight: 500;
   padding: 8px 2px;
   white-space: nowrap;
@@ -164,7 +164,7 @@
   background: var(--blue-900);
 }
 
-@media (max-width: 1319px) {
+@media (max-width: 1379px) {
   .menu-toggle {
     display: flex;
   }
