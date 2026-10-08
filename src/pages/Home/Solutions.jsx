@@ -3,26 +3,10 @@ import Reveal from '../../components/Reveal'
 import './Solutions.css'
 
 const SOLUTIONS = [
-  {
-    code: 'SB',
-    title: 'Savings',
-    text: 'Build financial security through accessible savings solutions.',
-  },
-  {
-    code: 'RD',
-    title: 'Recurring Deposit',
-    text: 'Save regularly and develop disciplined financial habits.',
-  },
-  {
-    code: 'FD',
-    title: 'Fixed Deposit',
-    text: 'Plan your savings with fixed-tenure deposit options.',
-  },
-  {
-    code: 'LN',
-    title: 'Loans',
-    text: 'Access financial support for agriculture, business, education, housing and other eligible needs.',
-  },
+  { code: 'SAVINGS', title: 'Savings Accounts', text: 'Safe and convenient savings solutions.' },
+  { code: 'RD', title: 'Recurring Deposit', text: 'Build your savings systematically.' },
+  { code: 'FD', title: 'Fixed Deposit', text: 'Secure your money with attractive returns.' },
+  { code: 'DEPOSITS', title: 'Deposit Schemes', text: 'Other deposit options for your goals.' },
 ]
 
 export default function Solutions() {
@@ -31,28 +15,21 @@ export default function Solutions() {
       <div className="container">
         <Reveal>
           <div className="section-header section-header--center">
-            <span className="section-eyebrow">Our Offerings</span>
-            <h2>Financial Solutions Designed Around Your Needs</h2>
+            <span className="section-eyebrow">Our Products</span>
+            <h2>Simple Ways to Save and Grow</h2>
           </div>
         </Reveal>
 
         <Reveal>
           <div className="solutions-grid">
             {SOLUTIONS.map((item) => (
-              <div key={item.code} className="solutions-card">
+              <Link key={item.code} to="/products" className="solutions-card">
                 <span className="solutions-card-code">{item.code}</span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-              </div>
+                <span className="solutions-card-more">Know More &rarr;</span>
+              </Link>
             ))}
-          </div>
-        </Reveal>
-
-        <Reveal>
-          <div className="solutions-cta">
-            <Link to="/products" className="btn btn-primary">
-              Explore Products &amp; Services
-            </Link>
           </div>
         </Reveal>
       </div>

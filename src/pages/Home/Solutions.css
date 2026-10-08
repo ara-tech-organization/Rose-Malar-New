@@ -4,24 +4,34 @@
 }
 
 .solutions-card {
+  display: block;
+  color: inherit;
   padding: 24px 22px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
+  transition: transform 0.15s ease;
+}
+
+.solutions-card:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
 }
 
 .solutions-card-code {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  min-width: 52px;
+  height: 52px;
+  padding-inline: 12px;
   margin-bottom: 14px;
   border-radius: var(--radius-pill);
   background: var(--blue-100);
   color: var(--blue-700);
-  font-size: 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
   font-weight: 700;
 }
 
@@ -35,9 +45,12 @@
   font-size: 0.9rem;
 }
 
-.solutions-cta {
-  margin-top: 32px;
-  text-align: center;
+.solutions-card-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue-500);
 }
 
 @media (min-width: 576px) {

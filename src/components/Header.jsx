@@ -25,11 +25,8 @@ export default function Header() {
 
       <div className="site-header-main">
         <Link to="/" className="brand">
-          <img src={logo} alt="Rose Malar Developmental Co-operative Society Ltd." className="brand-mark" />
-          <span className="brand-text">
-            <span className="brand-name">Rose Malar</span>
-            <span className="brand-subtitle">Developmental Co-operative Society Limited</span>
-          </span>
+          <img src={logo} alt="Rosmaler Developmental Cooperative Society Limited" className="brand-mark" />
+          <span className="brand-name">Rosmaler Developmental Cooperative Society Limited</span>
         </Link>
 
         <button
@@ -62,7 +59,7 @@ export default function Header() {
               Call Now
             </a>
             <Link to="/contact" className="btn btn-primary btn-sm" onClick={() => setMenuOpen(false)}>
-              Book Now
+              Become a Member
             </Link>
           </div>
         </nav>
@@ -72,7 +69,7 @@ export default function Header() {
             Call Now
           </a>
           <Link to="/contact" className="btn btn-primary btn-sm">
-            Book Now
+            Become a Member
           </Link>
         </div>
       </div>

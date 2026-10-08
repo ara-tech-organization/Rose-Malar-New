@@ -9,12 +9,6 @@ export default function JoinCta() {
         <Reveal>
           <div className="join-cta-inner">
             <h2>Your Goals. Our Support. Our Shared Future.</h2>
-            <p>
-              Whether you are planning your savings, developing your
-              livelihood, financing your education, starting a business or
-              building your home, Rose Malar is committed to supporting its
-              members.
-            </p>
             <Link to="/contact" className="btn btn-primary">
               Become a Member
             </Link>
