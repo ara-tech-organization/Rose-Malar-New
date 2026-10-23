@@ -1,15 +1,6 @@
 import Reveal from '../../components/Reveal'
+import { BOARD, ADVISORS } from '../../data/people'
 import './Leadership.css'
-
-const BOARD = [
-  { name: 'Mrs. Prabala Jabeegara Ross', role: 'Chairperson & CEO', chair: true },
-  { name: 'Mr. S. Chithambarathanu Pillai', role: 'Director' },
-  { name: 'Mr. Ramachandhra Rajulu', role: 'Director' },
-  { name: 'Mr. K. Sivaraj', role: 'Director' },
-  { name: 'Mr. N. Vidyadharan', role: 'Director' },
-  { name: 'Ms. C. Allipuspham', role: 'Director' },
-  { name: 'Ms. A.O. Fathimabee', role: 'Director' },
-]
 
 const ACCENTS = ['teal', 'magenta', 'indigo', 'coral']
 
@@ -115,17 +106,6 @@ const PRIORITIES = [
   },
 ]
 
-function initials(name) {
-  return name
-    .replace(/^(Mrs\.|Mr\.|Ms\.)\s*/, '')
-    .split(' ')
-    .filter(Boolean)
-    .map((part) => part[0])
-    .join('')
-    .slice(0, 3)
-    .toUpperCase()
-}
-
 export default function Leadership() {
   return (
     <>
@@ -163,7 +143,15 @@ export default function Leadership() {
             <div className="board-grid">
               {BOARD.map((member) => (
                 <div key={member.name} className={`board-card ${member.chair ? 'board-card--chair' : ''}`}>
-                  <div className="board-card-avatar">{initials(member.name)}</div>
+                  <img
+                    className="board-card-photo"
+                    src={member.photo}
+                    alt={member.name}
+                    width="640"
+                    height="800"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <h3>{member.name}</h3>
                   <span className="board-card-role">{member.role}</span>
                 </div>
@@ -175,34 +163,37 @@ export default function Leadership() {
 
       <section className="section section--surface">
         <div className="container">
-          <div className="advisory-split">
-            <Reveal>
-              <div className="advisory-copy">
-                <span className="section-eyebrow">Advisory Group</span>
-                <h2>Experience Supporting Better Decisions</h2>
-                <p>
-                  The Advisory Group provides expert guidance, strategic
-                  input and specialised knowledge across key functional
-                  areas.
-                </p>
-                <p>
-                  Its role includes supporting management in evaluating
-                  opportunities, addressing challenges, improving
-                  operational effectiveness and strengthening
-                  decision-making.
-                </p>
-              </div>
-            </Reveal>
+          <Reveal>
+            <div className="section-header">
+              <span className="section-eyebrow">Advisory Group</span>
+              <h2>Experience Supporting Better Decisions</h2>
+              <p>
+                Senior bankers, finance and governance professionals who
+                guide strategy and strengthen decision-making.
+              </p>
+            </div>
+          </Reveal>
 
-            <Reveal>
-              <div className="advisory-visual" aria-hidden="true">
-                <span className="advisory-visual-avatar" />
-                <span className="advisory-visual-avatar" />
-                <span className="advisory-visual-avatar" />
-                <span className="advisory-visual-note">Advisor photographs &amp; names</span>
-              </div>
-            </Reveal>
-          </div>
+          <Reveal>
+            <div className="advisor-grid">
+              {ADVISORS.map((advisor) => (
+                <div key={advisor.name} className="advisor-card">
+                  <img
+                    className="advisor-card-photo"
+                    src={advisor.photo}
+                    alt={advisor.name}
+                    width="640"
+                    height="800"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{advisor.name}</h3>
+                  <span className="advisor-card-role">{advisor.role}</span>
+                  {advisor.prior && <span className="advisor-card-prior">{advisor.prior}</span>}
+                </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 

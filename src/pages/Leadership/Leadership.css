@@ -37,24 +37,19 @@
   border: none;
 }
 
-.board-card-avatar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 68px;
-  height: 68px;
-  margin-bottom: 16px;
-  border-radius: 50%;
+.board-card-photo,
+.advisor-card-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-sm);
   background: var(--blue-100);
-  color: var(--blue-700);
-  font-weight: 700;
-  font-size: 1.05rem;
 }
 
-.board-card--chair .board-card-avatar {
-  background: var(--blue-950);
-  border: 2px solid var(--blue-500);
-  color: var(--white);
+.board-card-photo {
+  margin-bottom: 16px;
 }
 
 .board-card h3 {
@@ -80,56 +75,43 @@
 
 /* Advisory Group */
 
-.advisory-split {
+.advisor-grid {
   display: grid;
-  gap: 28px;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.advisory-copy p {
-  color: var(--text-muted);
-  margin-top: 14px;
-}
-
-.advisory-copy .section-eyebrow {
-  margin-top: 4px;
-}
-
-.advisory-copy h2 {
-  font-size: 1.5rem;
-  margin-top: 8px;
-}
-
-.advisory-visual {
+.advisor-card {
   display: flex;
-  align-items: center;
-  padding: 36px 24px;
-  background: var(--white);
-  border: 1px dashed var(--border);
-  border-radius: var(--radius-md);
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.advisory-visual-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--blue-100);
-  border: 3px solid var(--white);
-  box-shadow: 0 0 0 1px var(--border);
-  margin-left: -14px;
-}
-
-.advisory-visual-avatar:first-child {
-  margin-left: 0;
-}
-
-.advisory-visual-note {
-  width: 100%;
-  margin-top: 18px;
+  flex-direction: column;
+  padding: 12px 12px 18px;
   text-align: center;
-  font-size: 0.8rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.advisor-card-photo {
+  margin-bottom: 14px;
+}
+
+.advisor-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.advisor-card-role {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--blue-500);
+}
+
+.advisor-card-prior {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  line-height: 1.4;
   color: var(--text-muted);
 }
 
@@ -321,9 +303,8 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .advisory-split {
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
+  .advisor-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .priority-grid {
