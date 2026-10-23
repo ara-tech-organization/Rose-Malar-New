@@ -13,7 +13,7 @@
 .site-header-top-inner p {
   color: var(--white);
   font-size: 0.72rem;
-  padding: 6px 0;
+  padding: 4px 0;
   opacity: 0.85;
   text-align: center;
 }
@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 12px;
+  padding-block: 6px;
   padding-inline: 20px;
   gap: 14px;
 }
@@ -47,8 +47,8 @@
 }
 
 .brand-mark {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--blue-100);
@@ -67,8 +67,8 @@
 
 @media (min-width: 768px) {
   .brand-mark {
-    width: 76px;
-    height: 76px;
+    width: 56px;
+    height: 56px;
   }
 
   .brand-name {
@@ -97,7 +97,7 @@
 }
 
 .btn-sm {
-  padding: 8px 14px;
+  padding: 7px 14px;
   font-size: 0.8rem;
 }
 
@@ -234,8 +234,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   padding: 0;
   border-radius: 50%;
 }
@@ -254,4 +254,47 @@
   background: var(--blue-900);
   border-color: var(--blue-900);
   color: var(--white);
+}
+
+/* Entrance animation: top strip drops in, then the main bar fades down */
+.site-header-top {
+  animation: header-drop 0.6s ease-out both;
+}
+
+.site-header-main {
+  animation: header-drop 0.7s ease-out 0.15s both;
+}
+
+.site-header-top-inner p {
+  animation: header-fade 0.8s ease-out 0.4s both;
+}
+
+@keyframes header-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes header-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.85;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header-top,
+  .site-header-main,
+  .site-header-top-inner p {
+    animation: none;
+  }
 }
