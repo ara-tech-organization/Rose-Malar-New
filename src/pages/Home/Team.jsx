@@ -3,6 +3,10 @@ import Reveal from '../../components/Reveal'
 import { BOARD } from '../../data/people'
 import './Team.css'
 
+// Drop the title and keep initials glued to the surname so names wrap cleanly.
+const shortName = (name) =>
+  name.replace(/^(Mrs\.|Mr\.|Ms\.)\s*/, '').replace(/^((?:[A-Z]\.)+)\s/, '$1 ')
+
 export default function Team() {
   return (
     <section id="team" className="section">
@@ -19,7 +23,7 @@ export default function Team() {
             {BOARD.map((m) => (
               <li key={m.name} className="team-person">
                 <img src={m.photo} alt={m.name} width="640" height="800" loading="lazy" decoding="async" />
-                <strong>{m.name.replace(/^(Mrs\.|Mr\.|Ms\.)\s*/, '')}</strong>
+                <strong>{shortName(m.name)}</strong>
                 <span>{m.role}</span>
               </li>
             ))}
