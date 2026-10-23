@@ -12,6 +12,20 @@ const NAV_LINKS = [
   { to: '/contact', label: 'Contact' },
 ]
 
+function PhoneIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" role="presentation" aria-hidden="true">
+      <path
+        d="M5 4h3.5l1.7 4.2-2.1 1.3a11 11 0 0 0 5.4 5.4l1.3-2.1L19 14.5V18a2 2 0 0 1-2 2A13 13 0 0 1 3 6a2 2 0 0 1 2-2Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -55,8 +69,8 @@ export default function Header() {
           ))}
 
           <div className="site-nav-actions">
-            <a href="tel:+914146240683" className="btn btn-outline--dark btn-sm">
-              Call Now
+            <a href="tel:+914146240683" className="btn btn-outline--dark btn-sm btn-call" aria-label="Call us">
+              <PhoneIcon />
             </a>
             <Link to="/contact" className="btn btn-primary btn-sm" onClick={() => setMenuOpen(false)}>
               Become a Member
@@ -65,8 +79,8 @@ export default function Header() {
         </nav>
 
         <div className="site-header-actions">
-          <a href="tel:+914146240683" className="btn btn-outline--dark btn-sm">
-            Call Now
+          <a href="tel:+914146240683" className="btn btn-outline--dark btn-sm btn-call" aria-label="Call us">
+            <PhoneIcon />
           </a>
           <Link to="/contact" className="btn btn-primary btn-sm">
             Become a Member

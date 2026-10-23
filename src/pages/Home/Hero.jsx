@@ -1,21 +1,19 @@
-import { Link } from 'react-router-dom'
+import heroImage from '../../assets/hero.jpg'
 import './Hero.css'
 
-// Photo slot: replace the gradient with a real image, e.g. in Hero.css
-// `.hero { background-image: url('../../assets/photos/hero.jpg') }`.
+// The banner artwork carries the tagline, so the hero is the image alone.
 export default function Hero() {
   return (
     <section id="home" className="hero">
-      <div className="hero-overlay" />
-      <div className="container hero-content">
-        <h1>Together We Grow, Together We Prosper.</h1>
-        <p className="hero-lead">
-          Empowering Communities, Enriching Lives, Enhancing Growth.
-        </p>
-        <Link to="/about" className="btn btn-primary">
-          Know More
-        </Link>
-      </div>
+      <h1 className="visually-hidden">Together We Grow, Together We Prosper.</h1>
+      <img
+        className="hero-image"
+        src={heroImage}
+        alt="Smiling members of the community in front of the Rosmaler cooperative society office, under the heading Together We Grow, Together We Prosper"
+        width="1832"
+        height="859"
+        fetchPriority="high"
+      />
     </section>
   )
 }

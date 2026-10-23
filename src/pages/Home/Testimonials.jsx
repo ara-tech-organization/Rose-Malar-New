@@ -1,11 +1,22 @@
 import Reveal from '../../components/Reveal'
 import './Testimonials.css'
 
-// Placeholders: replace with real members, photos and written consent.
-const SLOTS = [
-  { name: 'Member name', place: 'Place', quote: 'Short quote about how Rosmaler helped.' },
-  { name: 'Member name', place: 'Place', quote: 'Short quote about how Rosmaler helped.' },
-  { name: 'Member name', place: 'Place', quote: 'Short quote about how Rosmaler helped.' },
+const TESTIMONIALS = [
+  {
+    name: 'Rajesh Kumar',
+    place: 'Thanjavur',
+    quote: 'Rosmaler has made a real difference in my life. Their support and guidance helped me move forward with confidence.',
+  },
+  {
+    name: 'Priya Raghul',
+    place: 'Chennai',
+    quote: 'Being part of Rosmaler has been a positive experience. I truly appreciate the care, encouragement, and valuable support I received.',
+  },
+  {
+    name: 'Suresh Balakrishnan',
+    place: 'Coimbatore',
+    quote: 'Rosmaler creates a welcoming and supportive community. I am grateful for the positive impact it has made on my journey.',
+  },
 ]
 
 export default function Testimonials() {
@@ -21,9 +32,8 @@ export default function Testimonials() {
 
         <Reveal>
           <div className="testimonial-grid">
-            {SLOTS.map((t, i) => (
-              <figure key={i} className="testimonial-card">
-                <div className="testimonial-photo" aria-hidden="true" />
+            {TESTIMONIALS.map((t) => (
+              <figure key={t.name} className="testimonial-card">
                 <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
                 <figcaption>
                   <strong>{t.name}</strong>

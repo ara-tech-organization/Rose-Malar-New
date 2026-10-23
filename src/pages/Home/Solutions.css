@@ -19,20 +19,21 @@
   transform: translateY(-3px);
 }
 
-.solutions-card-code {
+.solutions-card-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 52px;
-  height: 52px;
-  padding-inline: 12px;
+  width: 56px;
+  height: 56px;
   margin-bottom: 14px;
-  border-radius: var(--radius-pill);
+  border-radius: 50%;
   background: var(--blue-100);
-  color: var(--blue-700);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  font-weight: 700;
+  color: var(--accent-magenta);
+}
+
+.solutions-card-icon svg {
+  width: 28px;
+  height: 28px;
 }
 
 .solutions-card h3 {

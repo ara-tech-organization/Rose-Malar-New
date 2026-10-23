@@ -54,7 +54,6 @@
 .group-card-desc {
   color: var(--text-muted);
   font-size: 0.86rem;
-  font-style: italic;
 }
 
 .group-card-link {

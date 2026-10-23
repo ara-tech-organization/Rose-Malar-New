@@ -12,14 +12,6 @@
   box-shadow: var(--shadow-card);
 }
 
-.testimonial-photo {
-  width: 84px;
-  height: 84px;
-  margin: 0 auto 16px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-coral), var(--accent-teal));
-}
-
 .testimonial-card blockquote {
   margin: 0 0 14px;
   color: var(--text-muted);

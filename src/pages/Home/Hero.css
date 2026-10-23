@@ -1,49 +1,20 @@
 .hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 420px;
-  padding-block: 64px;
-  background: linear-gradient(135deg, var(--blue-950), var(--blue-700) 60%, var(--accent-teal));
-  background-size: cover;
-  background-position: center;
+  background: var(--blue-950);
 }
 
-.hero-overlay {
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
   position: absolute;
-  inset: 0;
-  background: rgba(60, 16, 53, 0.45);
-}
-
-.hero-content {
-  position: relative;
-  text-align: center;
-}
-
-.hero h1 {
-  max-width: 18ch;
-  margin: 0 auto 14px;
-  font-size: 2rem;
-  color: var(--white);
-}
-
-.hero-lead {
-  max-width: 520px;
-  margin: 0 auto 28px;
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-@media (min-width: 768px) {
-  .hero {
-    min-height: 560px;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero-lead {
-    font-size: 1.2rem;
-  }
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }

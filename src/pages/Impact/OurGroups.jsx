@@ -4,13 +4,34 @@ import './OurGroups.css'
 const ACCENTS = ['blue', 'teal', 'magenta', 'indigo', 'coral', 'blue', 'teal']
 
 const GROUPS = [
-  { name: 'Rosemalar' },
-  { name: 'BHSR – Courtallam' },
-  { name: 'Royal Court – Marriage Hall' },
-  { name: 'Nursing College' },
-  { name: 'BWDA Arts & Science College' },
-  { name: 'BWDA Mercantile' },
-  { name: 'BWDA Finance' },
+  {
+    name: 'Rosemalar',
+    text: 'Empowering communities through initiatives that support financial well-being, social development, and sustainable growth.',
+  },
+  {
+    name: 'BHSR – Courtallam',
+    text: 'A dedicated initiative focused on community engagement, development, and creating meaningful opportunities for people.',
+  },
+  {
+    name: 'Royal Court – Marriage Hall',
+    text: "A welcoming venue for weddings and special occasions, offering a comfortable space to celebrate life's memorable moments.",
+  },
+  {
+    name: 'Nursing College',
+    text: 'Nurturing the next generation of healthcare professionals through nursing education, practical learning, and professional development.',
+  },
+  {
+    name: 'BWDA Arts & Science College',
+    text: 'Providing quality higher education that fosters academic excellence, practical skills, and holistic student development.',
+  },
+  {
+    name: 'BWDA Mercantile',
+    text: 'Supporting commercial activities and business development through reliable services and sustainable growth opportunities.',
+  },
+  {
+    name: 'BWDA Finance',
+    text: 'Promoting financial inclusion by helping individuals and communities access financial services and opportunities for economic progress.',
+  },
 ]
 
 export default function OurGroups() {
@@ -35,21 +56,12 @@ export default function OurGroups() {
                   {group.name.charAt(0)}
                 </span>
                 <h3>{group.name}</h3>
-                <p className="group-card-desc">Description to be provided by the client.</p>
-                <span className="group-card-link" aria-disabled="true">
-                  Visit / Explore →
-                </span>
+                <p className="group-card-desc">{group.text}</p>
               </div>
             ))}
           </div>
         </Reveal>
 
-        <Reveal>
-          <p className="placeholder-note">
-            Group logos, approved descriptions and links will be added once
-            provided by the client.
-          </p>
-        </Reveal>
       </div>
     </section>
   )
