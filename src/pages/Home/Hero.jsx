@@ -15,8 +15,8 @@ const SLIDES = Object.entries(modules)
   .sort(([a], [b]) => bannerNumber(a) - bannerNumber(b))
   .map(([, src]) => src)
 
-const SLIDE_MS = 2000 // time a slide takes to move; keep in sync with Hero.css
-const HOLD_MS = 2000 // time a banner stays still before the next move
+const SLIDE_MS = 1000 // time a slide takes to move; keep in sync with Hero.css
+const HOLD_MS = 1000 // time a banner stays still before the next move
 const AUTOPLAY_MS = SLIDE_MS + HOLD_MS
 const ALT_FIRST =
   'Smiling members of the community in front of the Rosmaler cooperative society office, under the heading Together We Grow, Together We Prosper'
