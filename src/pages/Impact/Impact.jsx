@@ -72,7 +72,7 @@ export default function Impact() {
             <span className="section-eyebrow">Our Impact</span>
             <h2>Beyond Finance. Building Stronger Communities.</h2>
             <p>
-              Rose Malar&rsquo;s work goes beyond financial services. Through
+              Rosmaler&rsquo;s work goes beyond financial services. Through
               financial literacy, livelihood development, rural initiatives,
               housing support and community programmes, the Society works
               toward broader socio-economic development.

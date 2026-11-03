@@ -116,7 +116,7 @@ export default function Leadership() {
               <span className="section-eyebrow">Governance &amp; Leadership</span>
               <h2>Responsible Governance. Transparent Practices.</h2>
               <p>
-                Corporate governance is central to Rose Malar&rsquo;s
+                Corporate governance is central to Rosmaler&rsquo;s
                 commitment to transparency, accountability and ethical
                 business practices.
               </p>
@@ -256,7 +256,7 @@ export default function Leadership() {
               <span className="section-eyebrow">Looking Ahead</span>
               <h2>Building the Next Chapter of Cooperative Growth</h2>
               <p>
-                Rose Malar will continue to focus on membership
+                Rosmaler will continue to focus on membership
                 development, reaching underserved areas and advancing
                 socio-economic community development.
               </p>

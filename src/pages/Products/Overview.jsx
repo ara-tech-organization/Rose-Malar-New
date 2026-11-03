@@ -45,7 +45,7 @@ export default function Overview() {
             <h2>Financial Solutions Designed Around Your Needs</h2>
             <p>
               From everyday savings to long-term deposits and need-based
-              credit, Rose Malar provides a range of financial products
+              credit, Rosmaler provides a range of financial products
               designed around its members.
             </p>
           </div>

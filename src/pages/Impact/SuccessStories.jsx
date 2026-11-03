@@ -11,7 +11,7 @@ const STORIES = [
     category: 'Savings',
     accent: 'teal',
     challenge: "Managing household expenses while saving money for her children's education was a constant challenge.",
-    journey: "With Rose Malar's guidance, Lakshmi developed a regular savings habit and learned to plan her monthly budget more effectively.",
+    journey: "With Rosmaler's guidance, Lakshmi developed a regular savings habit and learned to plan her monthly budget more effectively.",
     outcome: "She built a consistent savings routine and gained greater confidence in managing her family's financial future.",
   },
   {
@@ -21,7 +21,7 @@ const STORIES = [
     category: 'Business',
     accent: 'magenta',
     challenge: 'Meena wanted to expand her home-based tailoring business but struggled to manage working capital and attract new customers.',
-    journey: "Through Rose Malar's support, she explored better financial planning, business management practices, and opportunities to reach more customers.",
+    journey: "Through Rosmaler's support, she explored better financial planning, business management practices, and opportunities to reach more customers.",
     outcome: 'Meena took steps toward expanding her business, improving her customer relationships, and building a more sustainable source of income.',
   },
   {
@@ -31,7 +31,7 @@ const STORIES = [
     category: 'Housing',
     accent: 'coral',
     challenge: "Revathi's family wanted to improve their living conditions but needed guidance on planning expenses and exploring suitable housing support.",
-    journey: 'Rose Malar helped her understand the importance of financial planning and explore relevant housing assistance options.',
+    journey: 'Rosmaler helped her understand the importance of financial planning and explore relevant housing assistance options.',
     outcome: "Revathi gained a clearer plan for improving her family's living conditions and taking practical steps towards a safer, more comfortable home.",
   },
 ]

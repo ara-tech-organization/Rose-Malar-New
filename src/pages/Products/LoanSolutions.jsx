@@ -38,7 +38,7 @@ export default function LoanSolutions() {
           <div className="section-header section-header--center">
             <span className="section-eyebrow">Loan Solutions</span>
             <h2>Finance for Your Needs. Support for Your Goals.</h2>
-            <p>Rose Malar offers a need-based range of loan products.</p>
+            <p>Rosmaler offers a need-based range of loan products.</p>
           </div>
         </Reveal>
 
