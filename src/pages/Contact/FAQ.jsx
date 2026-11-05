@@ -4,12 +4,12 @@ import './FAQ.css'
 
 const QUESTIONS = [
   {
-    question: 'What is Rosmaler Developmental Cooperative Society?',
+    question: 'What is Rose Malar Developmental Cooperative Society?',
     answer:
-      'Rosmaler Developmental Cooperative Society Limited is a Multi-State Co-operative Society focused on the economic and social well-being of its members.',
+      'Rose Malar Developmental Cooperative Society Limited is a Multi-State Co-operative Society focused on the economic and social well-being of its members.',
   },
   {
-    question: 'When was Rosmaler founded?',
+    question: 'When was Rose Malar founded?',
     answer: 'The Society was founded in 2008.',
   },
   {
@@ -19,15 +19,15 @@ const QUESTIONS = [
   {
     question: 'What loan products are available?',
     answer:
-      'Rosmaler provides various loan solutions including agriculture, personal, housing, business, gold, education, emergency and other eligible credit facilities.',
+      'Rose Malar provides various loan solutions including agriculture, personal, housing, business, gold, education, emergency and other eligible credit facilities.',
   },
   {
     question: 'How can I become a member?',
     answer:
-      'Submit the membership enquiry form and the Rosmaler team can guide you through the applicable process.',
+      'Submit the membership enquiry form and the Rose Malar team can guide you through the applicable process.',
   },
   {
-    question: 'How can I contact Rosmaler?',
+    question: 'How can I contact Rose Malar?',
     answer: 'Use the contact details below or submit an online enquiry.',
   },
 ]

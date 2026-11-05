@@ -5,17 +5,17 @@ const TESTIMONIALS = [
   {
     name: 'Rajesh Kumar',
     place: 'Thanjavur',
-    quote: 'Rosmaler has made a real difference in my life. Their support and guidance helped me move forward with confidence.',
+    quote: 'Rose Malar has made a real difference in my life. Their support and guidance helped me move forward with confidence.',
   },
   {
     name: 'Priya Raghul',
     place: 'Chennai',
-    quote: 'Being part of Rosmaler has been a positive experience. I truly appreciate the care, encouragement, and valuable support I received.',
+    quote: 'Being part of Rose Malar has been a positive experience. I truly appreciate the care, encouragement, and valuable support I received.',
   },
   {
     name: 'Suresh Balakrishnan',
     place: 'Coimbatore',
-    quote: 'Rosmaler creates a welcoming and supportive community. I am grateful for the positive impact it has made on my journey.',
+    quote: 'Rose Malar creates a welcoming and supportive community. I am grateful for the positive impact it has made on my journey.',
   },
 ]
 

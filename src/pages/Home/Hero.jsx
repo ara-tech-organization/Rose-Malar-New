@@ -19,7 +19,7 @@ const SLIDE_MS = 1000 // time a slide takes to move; keep in sync with Hero.css
 const HOLD_MS = 1000 // time a banner stays still before the next move
 const AUTOPLAY_MS = SLIDE_MS + HOLD_MS
 const ALT_FIRST =
-  'Smiling members of the community in front of the Rosmaler cooperative society office, under the heading Together We Grow, Together We Prosper'
+  'Smiling members of the community in front of the Rose Malar cooperative society office, under the heading Together We Grow, Together We Prosper'
 
 function Arrow({ direction }) {
   return (
@@ -133,7 +133,7 @@ export default function Hero() {
       id="home"
       className="hero"
       aria-roledescription="carousel"
-      aria-label="Rosmaler banners"
+      aria-label="Rose Malar banners"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
@@ -168,7 +168,7 @@ export default function Hero() {
                 <img
                   className="hero-image"
                   src={src}
-                  alt={real === 0 ? ALT_FIRST : `Rosmaler banner ${real + 1}`}
+                  alt={real === 0 ? ALT_FIRST : `Rose Malar banner ${real + 1}`}
                   width="1832"
                   height="859"
                   fetchPriority={i === (multiple ? 1 : 0) ? 'high' : 'auto'}

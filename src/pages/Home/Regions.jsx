@@ -29,7 +29,7 @@ export default function Regions() {
               viewBox="0 0 780 760"
               className="region-map"
               role="img"
-              aria-label="Map of the regions where Rosmaler operates: Tamil Nadu, Puducherry, Kerala, Karnataka and Andhra Pradesh"
+              aria-label="Map of the regions where Rose Malar operates: Tamil Nadu, Puducherry, Kerala, Karnataka and Andhra Pradesh"
             >
               {MAP_CONTEXT.map((d, i) => (
                 <path key={i} d={d} className="region-context" />

@@ -39,8 +39,8 @@ export default function Header() {
 
       <div className="site-header-main">
         <Link to="/" className="brand">
-          <img src={logo} alt="Rosmaler Developmental Cooperative Society Limited" className="brand-mark" />
-          <span className="brand-name">Rosmaler Developmental Cooperative Society Limited</span>
+          <img src={logo} alt="Rose Malar Developmental Cooperative Society Limited" className="brand-mark" />
+          <span className="brand-name">Rose Malar Developmental Cooperative Society Limited</span>
         </Link>
 
         <button

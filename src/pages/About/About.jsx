@@ -5,7 +5,7 @@ const JOURNEY = [
   {
     year: '2008',
     title: 'Foundation',
-    text: 'Rosmaler Developmental Cooperative Society Limited was founded by the late Shri R. Bhakther Solomon, Founder of the Development Promotion Group.',
+    text: 'Rose Malar Developmental Cooperative Society Limited was founded by the late Shri R. Bhakther Solomon, Founder of the Development Promotion Group.',
   },
   {
     year: '2018',
@@ -15,7 +15,7 @@ const JOURNEY = [
   {
     year: 'Today',
     title: 'Continuing the Mission',
-    text: 'Rosmaler continues to strengthen its financial services, governance, member outreach and development initiatives across multiple regions.',
+    text: 'Rose Malar continues to strengthen its financial services, governance, member outreach and development initiatives across multiple regions.',
   },
 ]
 
@@ -79,7 +79,7 @@ export default function About() {
             <span className="section-eyebrow">Who We Are</span>
             <h2>Building Economic Opportunity Through Cooperation</h2>
             <p>
-              Rosmaler Developmental Cooperative Society Limited is a
+              Rose Malar Developmental Cooperative Society Limited is a
               Multi-State Co-operative Society registered under the
               Multi-State Co-operative Societies Act, 2002, with India&rsquo;s
               Ministry of Co-operation.
@@ -128,7 +128,7 @@ export default function About() {
           <div className="about-activities">
             <h3 className="about-block-title">What We Do</h3>
             <p className="about-activities-intro">
-              Rosmaler&rsquo;s activities include:
+              Rose Malar&rsquo;s activities include:
             </p>
             <div className="about-activities-grid">
               {ACTIVITIES.map((activity, i) => (

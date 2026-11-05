@@ -36,7 +36,7 @@ export default function WhyUs() {
       <div className="container">
         <Reveal>
           <div className="section-header section-header--center">
-            <span className="section-eyebrow">Why Rosmaler?</span>
+            <span className="section-eyebrow">Why Rose Malar?</span>
             <h2>Values Stated in Our Annual Report</h2>
           </div>
         </Reveal>

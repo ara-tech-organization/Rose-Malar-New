@@ -46,7 +46,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <div className="footer-brand">
           <img src={logo} alt="RMDCS logo" className="footer-logo" loading="lazy" decoding="async" />
-          <p>Rosmaler Developmental Cooperative Society Limited</p>
+          <p>Rose Malar Developmental Cooperative Society Limited</p>
           <p className="footer-tagline">Together We Grow. Together We Prosper.</p>
         </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
 
       <div className="container footer-bottom">
-        <p>&copy; {year} Rosmaler Developmental Cooperative Society Limited. All rights reserved.</p>
+        <p>&copy; {year} Rose Malar Developmental Cooperative Society Limited. All rights reserved.</p>
       </div>
     </footer>
   )

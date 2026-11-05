@@ -45,7 +45,7 @@ export default function MembershipForm() {
         <Reveal>
           <div className="section-header section-header--center">
             <span className="section-eyebrow">Let&rsquo;s Grow Together</span>
-            <h2>Become a Member of Rosmaler</h2>
+            <h2>Become a Member of Rose Malar</h2>
             <p>
               Join a cooperative community built around mutual assistance,
               financial inclusion and shared development.
@@ -104,7 +104,7 @@ export default function MembershipForm() {
               </button>
               {submitted && (
                 <p className="membership-form-success">
-                  Thank you — a member of the Rosmaler team will get in touch
+                  Thank you — a member of the Rose Malar team will get in touch
                   with you shortly.
                 </p>
               )}
