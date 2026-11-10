@@ -6,9 +6,11 @@ import './Header.css'
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
-  { to: '/products', label: 'Products & Services' },
-  { to: '/impact', label: 'Our Impact' },
-  { to: '/leadership', label: 'Governance & Leadership' },
+  { to: '/products', label: 'Products' },
+  { to: '/impact', label: 'Impact' },
+  { to: '/leadership', label: 'Governance' },
+  { to: '/photo-gallery', label: 'Photo Gallery' },
+  { to: '/media-room', label: 'Media Room' },
   { to: '/contact', label: 'Contact' },
 ]
 

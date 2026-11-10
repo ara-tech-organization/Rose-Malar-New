@@ -30,15 +30,15 @@ export const BOARD = [
 ]
 
 export const ADVISORS = [
-  { name: 'Dr. C. Joslin Thambi', role: 'Chief Advisor', prior: 'Chairman & Managing Director, BWDA Group of Institutions', photo: joslin_thambi },
-  { name: 'Mr. R. Balaji Rangarajan', role: 'Chief Finance Officer', prior: 'BWDA Group of Institutions', photo: balaji_rangarajan },
-  { name: 'Dr. G. Rangarajan', role: 'Chief General Manager', prior: 'Ex-General Manager, Indian Bank', photo: g_rangarajan },
-  { name: 'Mr. E.B. Sarath', role: 'Company Secretary', prior: 'BWDA Group of Institutions', photo: sarath },
+  { name: 'Dr. C. Joslin Thambi', role: 'Chief Advisor', photo: joslin_thambi },
+  { name: 'Mr. R. Balaji Rangarajan', role: 'CA', photo: balaji_rangarajan },
+  { name: 'Dr. G. Rangarajan', prior: 'Ex-General Manager, Indian Bank', photo: g_rangarajan },
+  { name: 'Mr. E.B. Sarath', role: 'Company Secretary', photo: sarath },
   { name: 'Mr. M. Madasamy', role: 'Chief Vigilance Officer', prior: 'Ex-Superintendent of Police, Tamil Nadu Government', photo: madasamy },
-  { name: 'Mr. Parri', role: 'Sr. General Manager', prior: 'Ex-AGM, Indian Overseas Bank', photo: parri },
-  { name: 'Mr. G.H. Santharam', role: 'Sr. General Manager', prior: 'Ex-AGM, State Bank of India', photo: santharam },
-  { name: 'Mr. Devasenapathy', role: 'Sr. General Manager', prior: 'Ex-DGM, State Bank of India', photo: devasenapathy },
-  { name: 'Dr. G. Pannirselvam', role: 'Sr. General Manager', prior: '', photo: pannirselvam },
+  { name: 'Mr. Parri', role: 'General Manager', prior: 'Ex-AGM, Indian Overseas Bank', photo: parri },
+  { name: 'Mr. G.H. Santharam', role: 'General Manager', prior: 'Ex-AGM, State Bank of India', photo: santharam },
+  { name: 'Mr. Devasenapathy', role: 'General Manager', prior: 'Ex-DGM, State Bank of India', photo: devasenapathy },
+  { name: 'Dr. G. Pannirselvam', role: 'General Manager', prior: '', photo: pannirselvam },
   { name: 'Mr. M. Raja', role: 'General Manager', prior: 'Ex-AGM, Indian Bank', photo: raja },
   { name: 'Mr. I. Alwin Zhaharia', role: 'General Manager', prior: '', photo: alwin },
   { name: 'Mr. Harichanthiran', role: 'General Manager', prior: 'Ex-AGM, UCO Bank', photo: harichanthiran },

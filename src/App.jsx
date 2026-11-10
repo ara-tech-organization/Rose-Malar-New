@@ -11,6 +11,8 @@ const Products = lazy(() => import('./pages/Products'))
 const Impact = lazy(() => import('./pages/Impact'))
 const Leadership = lazy(() => import('./pages/Leadership'))
 const Contact = lazy(() => import('./pages/Contact'))
+const PhotoGallery = lazy(() => import('./pages/PhotoGallery'))
+const MediaRoom = lazy(() => import('./pages/MediaRoom'))
 
 function App() {
   const location = useLocation()
@@ -29,6 +31,8 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/leadership" element={<Leadership />} />
+            <Route path="/photo-gallery" element={<PhotoGallery />} />
+            <Route path="/media-room" element={<MediaRoom />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Home />} />
           </Routes>

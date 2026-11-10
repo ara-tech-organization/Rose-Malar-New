@@ -140,8 +140,8 @@ export default function Leadership() {
           </Reveal>
 
           <Reveal>
-            <div className="board-grid">
-              {BOARD.map((member) => (
+            <div className="board-layout">
+              {[BOARD.find((m) => m.chair), ...BOARD.filter((m) => !m.chair)].map((member) => (
                 <div key={member.name} className={`board-card ${member.chair ? 'board-card--chair' : ''}`}>
                   <img
                     className="board-card-photo"
@@ -188,7 +188,7 @@ export default function Leadership() {
                     decoding="async"
                   />
                   <h3>{advisor.name}</h3>
-                  <span className="advisor-card-role">{advisor.role}</span>
+                  {advisor.role && <span className="advisor-card-role">{advisor.role}</span>}
                   {advisor.prior && <span className="advisor-card-prior">{advisor.prior}</span>}
                 </div>
               ))}

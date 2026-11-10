@@ -20,7 +20,11 @@ const INFO = [
   },
   {
     label: 'Phone',
-    value: ['+91-4146-240683', '+91-4146-243861', '+91-4146-227966'],
+    hideLabel: true,
+    value: [
+      { tag: 'Phone:', numbers: ['+91-91505 00796'] },
+      { tag: 'Mobile:', numbers: ['+91-4146-240683', '+91-4146-243861'] },
+    ],
     icon: (
       <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
         <path
@@ -64,12 +68,25 @@ export default function Contact() {
                   {item.icon}
                 </span>
                 <div>
-                  <span className="contact-label">{item.label}</span>
-                  {item.value.map((line) => (
-                    <span key={line} className="contact-value">
-                      {line}
-                    </span>
-                  ))}
+                  {!item.hideLabel && <span className="contact-label">{item.label}</span>}
+                  {item.value.map((line) =>
+                    typeof line === 'string' ? (
+                      <span key={line} className="contact-value">
+                        {line}
+                      </span>
+                    ) : (
+                      <span key={line.tag} className="contact-value contact-value--row">
+                        <span className="contact-tag">{line.tag}</span>
+                        <span>
+                          {line.numbers.map((number) => (
+                            <span key={number} className="contact-number">
+                              {number}
+                            </span>
+                          ))}
+                        </span>
+                      </span>
+                    ),
+                  )}
                 </div>
               </div>
             ))}

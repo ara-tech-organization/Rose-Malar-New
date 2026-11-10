@@ -81,8 +81,8 @@ export default function About() {
             <p>
               Rose Malar Developmental Cooperative Society Limited is a
               Multi-State Co-operative Society registered under the
-              Multi-State Co-operative Societies Act, 2002, with India&rsquo;s
-              Ministry of Co-operation.
+              Multi-State Co-operative Societies Act, 2002, with the
+              Ministry of Cooperation, Government of India.
             </p>
             <p>
               Founded in 2008, the Society was established to promote the

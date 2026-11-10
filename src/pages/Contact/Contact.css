@@ -11,7 +11,7 @@
   align-items: flex-start;
   gap: 14px;
   min-width: 0;
-  padding: 14px 16px;
+  padding: 14px 28px 14px 16px;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-md);
@@ -56,10 +56,37 @@
   color: var(--white);
 }
 
+.contact-value--row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.contact-tag {
+  flex: 0 0 4.2em;
+}
+
+.contact-number {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .contact-banner {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 40px 48px;
   }
 }
+
+/* Wide screens: three cards sized to their content, each value on one line. */
+@media (min-width: 1100px) {
+  .contact-banner {
+    grid-template-columns: repeat(3, max-content);
+    justify-content: space-between;
+  }
+
+  .contact-value {
+    white-space: nowrap;
+  }
+}
+

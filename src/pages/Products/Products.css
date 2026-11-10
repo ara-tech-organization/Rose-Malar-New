@@ -109,30 +109,18 @@
 }
 
 .product-terms {
-  display: grid;
-  list-style: none;
-  padding: 0;
-  margin-bottom: 0;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
+  margin: 0 0 16px;
+  padding-left: 22px;
+  list-style: disc;
 }
 
 .product-terms li {
-  padding: 12px 16px;
   color: var(--text);
-  font-size: 0.9rem;
-  line-height: 1.5;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
 }
 
-.product-terms li:last-child {
-  border-bottom: none;
-}
-
-.product-terms li:nth-child(even) {
-  background: var(--surface);
+.product-terms li::marker {
+  color: var(--blue-500);
 }
 
 .product-body-split .rate-table-wrap {
@@ -163,15 +151,3 @@
   }
 }
 
-@media (min-width: 1100px) {
-  .product-body-split {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
-    align-items: start;
-  }
-
-  .product-body-split .rate-table-wrap {
-    margin-top: 4px;
-  }
-}

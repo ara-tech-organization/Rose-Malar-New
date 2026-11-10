@@ -10,9 +10,14 @@
 
 /* Board of Directors */
 
-.board-grid {
+.board-layout {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+}
+
+.board-card--chair {
+  grid-column: 1 / -1;
 }
 
 .board-card {
@@ -271,18 +276,21 @@
 /* Responsive */
 
 @media (min-width: 576px) {
-  .board-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .priority-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 768px) {
-  .board-grid {
+  .board-layout {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .board-card--chair {
+    grid-column: 1 / -1;
+    max-width: 360px;
+    justify-self: center;
+    width: 100%;
   }
 
   .committee-row {
@@ -299,8 +307,49 @@
 }
 
 @media (min-width: 992px) {
-  .board-grid {
-    grid-template-columns: repeat(4, 1fr);
+  /* Chair spans the full left column; the six directors fill 3 x 2 on the right. */
+  .board-layout {
+    grid-template-columns: 2.2fr repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 16px;
+  }
+
+  .board-card--chair {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    max-width: none;
+    justify-self: stretch;
+    justify-content: flex-start;
+    padding: 28px;
+  }
+
+  .board-card--chair .board-card-photo {
+    flex: 1 1 0;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+    margin-bottom: 24px;
+  }
+
+  .board-card--chair h3 {
+    font-size: 1.35rem;
+  }
+
+  .board-card--chair .board-card-role {
+    font-size: 0.85rem;
+  }
+
+  .board-layout .board-card:not(.board-card--chair) {
+    padding: 12px 10px 14px;
+  }
+
+  .board-layout .board-card:not(.board-card--chair) .board-card-photo {
+    margin-bottom: 10px;
+  }
+
+  .board-layout .board-card:not(.board-card--chair) h3 {
+    min-height: 2.6em;
+    font-size: 0.88rem;
   }
 
   .advisor-grid {

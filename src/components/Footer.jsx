@@ -8,6 +8,8 @@ const QUICK_LINKS = [
   { to: '/products', label: 'Products & Services' },
   { to: '/impact', label: 'Our Impact' },
   { to: '/leadership', label: 'Governance' },
+  { to: '/photo-gallery', label: 'Photo Gallery' },
+  { to: '/media-room', label: 'Media Room' },
   { to: '/contact', label: 'Contact' },
 ]
 

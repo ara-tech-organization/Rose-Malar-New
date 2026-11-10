@@ -23,7 +23,7 @@ export default function OurReach() {
           <div className="section-header section-header--center">
             <span className="section-eyebrow">Our Reach</span>
             <h2>Growing Across Regions</h2>
-            <p>{TOTAL_MEMBERS.toLocaleString('en-IN')} members across six states and union territories.</p>
+            <p>{TOTAL_MEMBERS.toLocaleString('en-IN')} members across four states and two union territories.</p>
           </div>
         </Reveal>
 
