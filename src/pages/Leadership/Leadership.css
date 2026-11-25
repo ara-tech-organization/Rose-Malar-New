@@ -202,7 +202,7 @@
 /* Our People band */
 
 .people-band {
-  padding-block: 56px;
+  padding-block: 40px 56px;
   background: linear-gradient(160deg, var(--blue-950), var(--blue-900) 70%);
 }
 
@@ -304,7 +304,7 @@
   }
 
   .people-band {
-    padding-block: 72px;
+    padding-block: 52px 72px;
   }
 
   .people-band-inner h2 {

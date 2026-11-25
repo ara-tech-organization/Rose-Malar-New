@@ -1,115 +1,92 @@
 import Reveal from '../../components/Reveal'
 import './Membership.css'
 
-const ELIGIBILITY = [
-  'Indian citizens.',
-  'A firm, body corporate, trust, AOP, SHG / JLG or other person competent to enter into a contract under Section 11 of the Indian Contract Act.',
+const STEPS = [
+  {
+    title: 'Check eligibility',
+    accent: 'teal',
+    items: [
+      'Indian citizens.',
+      'A firm, body corporate, trust, AOP, SHG / JLG or other person competent to contract under Section 11 of the Indian Contract Act.',
+    ],
+  },
+  {
+    title: 'Keep your documents ready',
+    accent: 'magenta',
+    items: [
+      '3 recent passport-size photographs.',
+      'Self-attested copy of Aadhaar Card / Passport / PAN Card / Voter ID / Ration Card.',
+      'Any one address proof (compulsory).',
+    ],
+  },
+  {
+    title: 'Apply and pay',
+    accent: 'indigo',
+    items: [
+      'Submit your application with KYC documents to the Board, at any one of our offices.',
+      'Remit the admission fee and share amount with the application.',
+      'Be introduced by an existing member.',
+    ],
+  },
 ]
 
-const DOCUMENTS = [
-  'Recent passport-size photographs — 3 nos.',
-  'Self-attested copy of Aadhaar Card / Passport / PAN Card / Voter ID / Ration Card.',
-  'Any one address proof (compulsory).',
+const APPLICANTS = [
+  { name: 'Individual', fee: '₹200', shares: '1 share', amount: '₹200', detail: '₹100 + ₹100 premium' },
+  { name: 'SHG / JLG', fee: '₹200', shares: '5 shares', amount: '₹1,000', detail: '₹500 + ₹500 premium' },
+  { name: 'Primary Facilitators', fee: '₹200', shares: '10 shares', amount: '₹2,000', detail: '₹1,000 + ₹1,000 premium' },
+  { name: 'Firm, body corporate, trust & AOP', fee: '₹1,000', shares: '10 shares', amount: '₹2,000', detail: '₹1,000 + ₹1,000 premium' },
 ]
-
-const FEES = [
-  ['Individual, SHG / JLG and Primary Facilitators', '₹200'],
-  ['Firm, body corporate, trust, AOP', '₹1,000'],
-]
-
-const SHARES = [
-  ['Individual', '1 share', '₹100 + ₹100 premium = ₹200'],
-  ['SHG / JLG', '5 shares', '₹500 + ₹500 premium = ₹1,000'],
-  ['Primary Facilitators, firm, body corporate, trust & AOP', '10 shares', '₹1,000 + ₹1,000 premium = ₹2,000'],
-]
-
-function FeeTable({ caption, heads, rows }) {
-  return (
-    <div className="membership-table-wrap">
-      <span className="membership-table-caption">{caption}</span>
-      <div className="membership-table-scroll">
-        <table className="membership-table">
-          <thead>
-            <tr>
-              {heads.map((h) => (
-                <th key={h}>{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row) => (
-              <tr key={row[0]}>
-                {row.map((cell, i) => (
-                  <td key={cell} className={i === row.length - 1 ? 'membership-table-value' : ''}>
-                    {cell}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  )
-}
 
 export default function Membership() {
   return (
     <Reveal>
       <div id="membership-info" className="membership-info">
-        <h3 className="products-block-title">Membership</h3>
+        <h3 className="products-block-title">How to Become a Member</h3>
 
-        <div className="membership-info-grid">
-          <div className="membership-info-card">
-            <h4>Eligibility to become a member</h4>
-            <ol>
-              {ELIGIBILITY.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ol>
-          </div>
+        <ol className="membership-steps">
+          {STEPS.map((step, i) => (
+            <li key={step.title} className={`membership-step membership-step--${step.accent}`}>
+              <span className="membership-step-number" aria-hidden="true">
+                {i + 1}
+              </span>
+              <h4>{step.title}</h4>
+              <ul>
+                {step.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ol>
 
-          <div className="membership-info-card">
-            <h4>Documents to submit</h4>
-            <p>
-              Apply at any one of our offices with the documents below as ID and
-              address proof.
-            </p>
-            <ol type="i">
-              {DOCUMENTS.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ol>
-          </div>
-
-          <div className="membership-info-card">
-            <h4>Application for membership</h4>
-            <ol>
-              <li>
-                Submit a proper application with the required KYC documents to
-                the Board of the Society.
-              </li>
-              <li>Remit the admission fee and share amount along with the application.</li>
-            </ol>
-            <p className="membership-info-note">
-              An applicant has to be properly introduced by an existing member.
-            </p>
-          </div>
-        </div>
-
-        <div className="membership-tables">
-          <FeeTable caption="Admission fee" heads={['Applicant', 'Fee']} rows={FEES} />
-          <FeeTable
-            caption="Subscription to shares · ₹100 per share + ₹100 premium"
-            heads={['Applicant', 'Minimum', 'Amount']}
-            rows={SHARES}
-          />
-        </div>
-
-        <p className="membership-info-note">
-          A member can purchase more than 10 units of shares with the approval of
-          the Board.
+        <h3 className="products-block-title membership-fees-title">Admission Fee &amp; Shares</h3>
+        <p className="membership-fees-intro">
+          Each share is ₹100 with a ₹100 premium. A member can buy more than 10
+          units with the approval of the Board.
         </p>
+
+        <div className="membership-fees">
+          {APPLICANTS.map((a) => (
+            <div key={a.name} className="membership-fee-card">
+              <h4>{a.name}</h4>
+              <dl>
+                <div>
+                  <dt>Admission fee</dt>
+                  <dd>{a.fee}</dd>
+                </div>
+                <div>
+                  <dt>Minimum shares</dt>
+                  <dd>{a.shares}</dd>
+                </div>
+              </dl>
+              <div className="membership-fee-total">
+                <span>Share amount</span>
+                <strong>{a.amount}</strong>
+                <small>{a.detail}</small>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </Reveal>
   )
