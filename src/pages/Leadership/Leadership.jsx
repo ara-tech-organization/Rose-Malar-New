@@ -116,8 +116,8 @@ export default function Leadership() {
               <span className="section-eyebrow">Governance &amp; Leadership</span>
               <h2>Responsible Governance. Transparent Practices.</h2>
               <p>
-                Corporate governance is central to Rose Malar&rsquo;s
-                commitment to transparency, accountability and ethical
+                Corporate governance is central to the commitment of
+                Rose Malar to transparency, accountability and ethical
                 business practices.
               </p>
               <p>

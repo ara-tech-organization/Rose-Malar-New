@@ -3,24 +3,23 @@ import Reveal from '../../components/Reveal'
 import RateTable from './RateTable'
 import './Products.css'
 
-const RATE_COLUMNS = [
+const RD_COLUMNS = [
   'Period',
-  'General (Individual)',
-  'Senior Citizens / Widows / Differently Abled / Primary Facilitators',
-  'SHG / JLG / Others',
+  'Individual / SHG / JLG and others',
+  'Senior Citizens / Widows / Physically Challenged',
 ]
 
 const RD_RATES = [
-  ['1 Year', '8.50%', '9.00%', '8.50%'],
-  ['2 Years', '9.00%', '9.50%', '9.00%'],
-  ['3 Years', '9.50%', '10.00%', '9.50%'],
-  ['4 Years', '10.00%', '10.50%', '10.00%'],
-  ['5 Years', '10.50%', '11.00%', '10.50%'],
+  ['1 Year', '8.50%', '9.00%'],
+  ['2 Years', '9.00%', '9.50%'],
+  ['3 Years', '9.50%', '10.00%'],
+  ['4 Years', '10.00%', '10.50%'],
+  ['5 Years', '10.50%', '11.00%'],
 ]
 
 const FD_COLUMNS = [
   'Period',
-  'General (Individual)',
+  'Individual / SHG / JLG and others',
   'Senior Citizens / Widows / Physically Challenged',
 ]
 
@@ -48,6 +47,7 @@ const SCHEMES = [
       'KYC required: Aadhaar Card, PAN Card, Ration Card, Voter ID, and photographs.',
     ],
     rates: RD_RATES,
+    rateColumns: RD_COLUMNS,
   },
   {
     id: 'sb',
@@ -164,7 +164,7 @@ export default function Products() {
                             ))}
                           </ul>
                         </div>
-                        {scheme.rates && <RateTable columns={scheme.rateColumns || RATE_COLUMNS} rows={scheme.rates} />}
+                        {scheme.rates && <RateTable columns={scheme.rateColumns} rows={scheme.rates} />}
                       </div>
                     </div>
                   )}
