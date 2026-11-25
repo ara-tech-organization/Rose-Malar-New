@@ -50,6 +50,9 @@ export default function MembershipForm() {
               Join a cooperative community built around mutual assistance,
               financial inclusion and shared development.
             </p>
+            <p className="membership-download">
+              <strong>Membership forms download</strong> — form to be published here.
+            </p>
           </div>
         </Reveal>
 

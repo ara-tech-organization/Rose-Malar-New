@@ -3,6 +3,17 @@ import './LoanPerformance.css'
 
 const STATS = [
   {
+    value: '85,544',
+    label: 'Total Members',
+    accent: 'indigo',
+    icon: (
+      <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
+        <circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M5.5 20c.8-3.6 3.3-5.6 6.5-5.6s5.7 2 6.5 5.6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
     value: '₹63.09 Cr',
     label: 'Loan Outstanding',
     accent: 'teal',

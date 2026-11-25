@@ -1,0 +1,63 @@
+.ecosystem-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.ecosystem-card {
+  padding: 22px 22px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--accent-teal);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.ecosystem-card--magenta {
+  border-top-color: var(--accent-magenta);
+}
+
+.ecosystem-card--indigo {
+  border-top-color: var(--accent-indigo);
+}
+
+.ecosystem-card--coral {
+  border-top-color: var(--accent-coral);
+}
+
+.ecosystem-card h3 {
+  margin-bottom: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.ecosystem-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ecosystem-card li {
+  padding: 6px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--blue-900);
+}
+
+.ecosystem-card li + li {
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 576px) {
+  .ecosystem-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .ecosystem-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

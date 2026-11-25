@@ -21,12 +21,12 @@ import harichanthiran from '../assets/people/harichanthiran.jpg'
 
 export const BOARD = [
   { name: 'Mrs. Prabala Jabeegara Ross', role: 'Chairperson & CEO', photo: prabala, chair: true },
-  { name: 'Mr. S. Chithambarathanu Pillai', role: 'Director', photo: chithambaranathan },
-  { name: 'Mr. Ramachandhra Rajulu', role: 'Director', photo: rajulu },
-  { name: 'Mr. K. Sivaraj', role: 'Director', photo: sivaraj },
-  { name: 'Mr. N. Vidyadharan', role: 'Director', photo: vidyadharan },
-  { name: 'Ms. C. Allipuspham', role: 'Director', photo: allipuspam },
-  { name: 'Ms. A.O. Fathimabee', role: 'Director', photo: fathimabee },
+  { name: 'Mr. S. Chithambarathanu Pillai', role: 'Director', state: 'Kerala', photo: chithambaranathan },
+  { name: 'Mr. Ramachandhra Rajulu', role: 'Director', state: 'Andhra Pradesh', photo: rajulu },
+  { name: 'Mr. K. Sivaraj', role: 'Director', state: 'Tamil Nadu', photo: sivaraj },
+  { name: 'Mr. N. Vidyadharan', role: 'Director', state: 'Tamil Nadu', photo: vidyadharan },
+  { name: 'Ms. C. Allipuspham', role: 'Director', state: 'Andaman & Nicobar Islands', photo: allipuspam },
+  { name: 'Ms. A.O. Fathimabee', role: 'Director', state: 'Puducherry', photo: fathimabee },
 ]
 
 export const ADVISORS = [

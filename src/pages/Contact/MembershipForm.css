@@ -77,3 +77,9 @@
     padding: 40px;
   }
 }
+
+.membership-download {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}

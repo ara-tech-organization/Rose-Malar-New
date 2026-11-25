@@ -101,6 +101,17 @@ const SPECIALISED_LOANS = [
       </svg>
     ),
   },
+  {
+    title: 'Green Finance — Solar Products',
+    text: 'Financing for solar products that help members and communities move to clean energy.',
+    accent: 'teal',
+    icon: (
+      <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
 ]
 
 export default function SpecialisedLoans() {

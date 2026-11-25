@@ -35,7 +35,7 @@ const SAVINGS = [
   },
 ]
 
-export default function Overview() {
+export default function Overview({ children }) {
   return (
     <section id="products" className="section">
       <div className="container">
@@ -50,6 +50,8 @@ export default function Overview() {
             </p>
           </div>
         </Reveal>
+
+        {children}
 
         <Reveal>
           <h3 className="products-block-title">Savings Solutions</h3>

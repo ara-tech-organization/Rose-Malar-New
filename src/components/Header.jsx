@@ -35,7 +35,7 @@ export default function Header() {
     <header className="site-header">
       <div className="site-header-top">
         <div className="container site-header-top-inner">
-          <p>A Multi-State Co-operative Society · Regd. under the Ministry of Agriculture &amp; Farmers Welfare, Govt. of India</p>
+          <p>A Multi-State Co-operative Society · Regd. under the Ministry of Cooperation, Govt. of India</p>
         </div>
       </div>
 

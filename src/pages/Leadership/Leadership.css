@@ -74,6 +74,12 @@
   color: var(--blue-500);
 }
 
+.board-card-state {
+  margin-top: 2px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
 .board-card--chair .board-card-role {
   color: #dba8cb;
 }

@@ -53,7 +53,7 @@ const ACTIVITIES = [
   },
   {
     title: 'Agriculture & Rural Development',
-    text: 'Supporting farm and non-farm activities and rural communities.',
+    text: 'Supporting farm and non-farm activities in rural communities.',
   },
   {
     title: 'Sustainable Development',
@@ -128,7 +128,7 @@ export default function About() {
           <div className="about-activities">
             <h3 className="about-block-title">What We Do</h3>
             <p className="about-activities-intro">
-              Rose Malar&rsquo;s activities include:
+              Rose Malar activities include:
             </p>
             <div className="about-activities-grid">
               {ACTIVITIES.map((activity, i) => (

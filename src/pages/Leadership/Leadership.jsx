@@ -6,17 +6,6 @@ const ACCENTS = ['teal', 'magenta', 'indigo', 'coral']
 
 const COMMITTEES = [
   {
-    title: 'Audit Committee',
-    text: 'Supporting financial oversight and accountability.',
-    accent: 'teal',
-    icon: (
-      <>
-        <path d="M6 3.5h9l4.5 4.5V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-        <path d="M9 12.5l2 2 4-4.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-      </>
-    ),
-  },
-  {
     title: 'Admission & Share Committee',
     text: 'Supporting member admission and share-related matters.',
     accent: 'magenta',
@@ -25,6 +14,29 @@ const COMMITTEES = [
         <circle cx="9" cy="8.5" r="3" fill="none" stroke="currentColor" strokeWidth="1.6" />
         <path d="M3.5 20c.6-3.4 2.8-5.5 5.5-5.5s4.9 2.1 5.5 5.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
         <path d="M16 4.5l1.2 2.5 2.7.4-2 1.9.5 2.7-2.4-1.3-2.4 1.3.5-2.7-2-1.9 2.7-.4z" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+      </>
+    ),
+  },
+  {
+    title: 'Credit Committee',
+    text: 'Supporting credit-related oversight.',
+    accent: 'teal',
+    icon: (
+      <>
+        <rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        <path d="M3 10h18" stroke="currentColor" strokeWidth="1.6" />
+        <path d="M6.5 14.5h4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      </>
+    ),
+  },
+  {
+    title: 'Audit Committee',
+    text: 'Supporting financial oversight and accountability.',
+    accent: 'teal',
+    icon: (
+      <>
+        <path d="M6 3.5h9l4.5 4.5V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+        <path d="M9 12.5l2 2 4-4.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
       </>
     ),
   },
@@ -54,18 +66,6 @@ const COMMITTEES = [
           strokeLinejoin="round"
         />
         <path d="M8.5 9.5h7M8.5 12.5h4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-      </>
-    ),
-  },
-  {
-    title: 'Credit Committee',
-    text: 'Supporting credit-related oversight.',
-    accent: 'teal',
-    icon: (
-      <>
-        <rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" strokeWidth="1.6" />
-        <path d="M3 10h18" stroke="currentColor" strokeWidth="1.6" />
-        <path d="M6.5 14.5h4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
       </>
     ),
   },
@@ -154,6 +154,7 @@ export default function Leadership() {
                   />
                   <h3>{member.name}</h3>
                   <span className="board-card-role">{member.role}</span>
+                  {member.state && <span className="board-card-state">{member.state}</span>}
                 </div>
               ))}
             </div>
